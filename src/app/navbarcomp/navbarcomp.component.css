@@ -7,8 +7,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-button{
-    margin-top:165px;
-    margin-right: 25px;
+.img{
+   height: 150px; 
 }
