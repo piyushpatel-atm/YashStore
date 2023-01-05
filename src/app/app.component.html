@@ -1,1 +1,20 @@
 <app-navbarcomp></app-navbarcomp>
+
+<mat-sidenav-container fullscreen>
+
+    <mat-toolbar color="primary">
+        <a mat-button><mat-icon matSuffix>home</mat-icon>
+            <mat-label>Home</mat-label>
+        </a>
+        <a mat-button routerLink="adminlogin"><mat-icon matSuffix>person</mat-icon>
+            <mat-label>Login</mat-label>
+        </a>
+        <a mat-button><mat-icon matSuffix>add</mat-icon>
+            <mat-label>Register</mat-label>
+        </a>
+
+
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+</mat-sidenav-container>

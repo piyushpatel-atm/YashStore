@@ -1,0 +1,25 @@
+<div>
+    <form>
+        <form [formGroup]="adminForm">
+            <h1 style="color: black;">Login</h1><br>
+            <mat-form-field>
+                <input matInput placeholder="Username" apperance="fill" formControlName="username">
+                <mat-icon matTextSuffix>people</mat-icon>
+                <mat-label>Username</mat-label>
+                <mat-error *ngIf="this.adminForm.controls['username'].hasError('required')">required</mat-error>
+            </mat-form-field><br>
+            <mat-form-field>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                <mat-label>Password</mat-label>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error *ngIf="this.adminForm.controls['password'].hasError('required')">required</mat-error>
+            </mat-form-field><br>
+    
+            <button mat-raised-button color="warn" type="submit" (click)="submit()">submit</button>
+            
+        </form>
+    </form>
+</div>
