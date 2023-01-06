@@ -1,14 +1,3 @@
-.listproduct{
-    height: 200px;
-    width:200px;
-    box-shadow: 5px 5px 5px gray;
-    float: left;
-    margin: 20px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-button{
-    margin-top:165px;
-    margin-right: 25px;
+main{
+ margin-bottom: 300px;
 }
