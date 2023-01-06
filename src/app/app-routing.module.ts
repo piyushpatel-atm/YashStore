@@ -8,7 +8,7 @@ import { SignInComponent } from './LoginFolder/sign-in/sign-in.component';
 import { SignUpComponent } from './LoginFolder/sign-up/sign-up.component';
 import { VerifyEmailComponent } from './LoginFolder/verify-email/verify-email.component';
 const routes: Routes = [
-  //{ path: '', redirectTo: '/sign-in', pathMatch: 'full' },
+  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'dashboard', component: DashboardComponent },
