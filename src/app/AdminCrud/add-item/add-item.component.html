@@ -1,0 +1,34 @@
+<div class="formclass">
+    
+    <form [formGroup]="item" (ngSubmit)="submit()">
+        <h1 style="color: black;">Register</h1><br>
+        <mat-form-field>
+            <input matInput placeholder="Name" apperance="fill" formControlName="name">
+            <mat-icon matTextSuffix>name</mat-icon>
+            <mat-label>ItemName</mat-label>
+    
+
+        </mat-form-field><br>
+        <mat-form-field>
+            <input matInput placeholder="ItemUrl" apperance="fill" formControlName="itemUrl">
+            <mat-icon matTextSuffix>url</mat-icon>
+            <mat-label>ItemUrl</mat-label>
+           
+        </mat-form-field><br>
+        
+        <mat-form-field>
+            <input matInput placeholder="Price" apperance="fill" formControlName="price">
+            <mat-icon matTextSuffix>price</mat-icon>
+            <mat-label>Price</mat-label>
+           
+        </mat-form-field><br>
+       
+      
+
+
+        <button mat-raised-button color="warn" type="submit">submit</button>
+
+    </form>
+
+<router-outlet></router-outlet>
+</div>

@@ -1,0 +1,61 @@
+<div class="container-fluid">
+    <div class="row">
+  
+      <nav class="col-md-2 d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active">
+                <i class="fas fa-user"></i>User Profile
+              </a>
+            </li>
+            <!-- Calling SignOut() Api from AuthService -->
+            <li class="nav-item">
+              <a class="nav-link" (click)="authService.SignOut()">
+                <i class="fas fa-sign-out-alt"></i>Log out
+              </a>
+            </li>
+             <!-- Calling Additem Page -->
+            <!-- <li class="nav-item">
+                <a class="nav-link" (click)="addItem()">
+                    <i class="fas fa-sign-out-alt"></i>Add Item
+                </a>
+              </li> -->
+              <li>
+              <a mat-button (click)="additem()">
+                <mat-label>AddItem</mat-label>
+                <mat-icon matSuffix>add</mat-icon>
+
+              </a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="productFrame" *ngFor="let item of list">
+        <div class="listproduct" >
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{item.name}}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image src={{item.itemUrl}} alt="Photo of a Shiba Inu" class="img">
+                <!-- <mat-card-content>
+                </mat-card-content> -->
+                <mat-card-actions>
+                  <button mat-raised-button color="warn" (click)="updateItem(item)">Update</button>
+                  {{item.price}}
+                  <button mat-raised-button color="warn" (click)="Delete(item.id)">Delete</button>
+                </mat-card-actions>
+              </mat-card>
+              
+
+            <!-- <button mat-raised-button color="warn">Details</button>
+            <button mat-raised-button color="warn" (click)="add(i)">Add</button> -->
+
+        </div>
+      </div>
+
+      
+
+</div>
+
