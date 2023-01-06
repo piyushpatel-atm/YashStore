@@ -7,11 +7,11 @@ import { ForgotPasswordComponent } from './LoginFolder/forgot-password/forgot-pa
 import { SignInComponent } from './LoginFolder/sign-in/sign-in.component';
 import { SignUpComponent } from './LoginFolder/sign-up/sign-up.component';
 import { VerifyEmailComponent } from './LoginFolder/verify-email/verify-email.component';import { NavbarcompComponent } from './navbarcomp/navbarcomp.component';
-import { AddproductComponent } from './Product/addproduct/addproduct.component';
-import { DashboardComponent } from './Product/dashboard/dashboard.component';
+import { AdminDashboardComponent } from './AdminCrud/admin-dashboard/admin-dashboard.component';
+import { AddItemComponent } from './AdminCrud/add-item/add-item.component';
 
 const routes: Routes = [
-  //{ path: '', redirectTo: '/sign-in', pathMatch: 'full' },
+  // { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'dashboard', component: DashboardComponent },
@@ -20,7 +20,8 @@ const routes: Routes = [
   { path: 'adminlogin',component:AdminLoginComponent},
   {path:"",component:NavbarcompComponent},
   {path:"dashboard",component:DashboardComponent},
-  {path:"addproduct",component:AddproductComponent}
+  {path:"adminDashboard",component:AdminDashboardComponent},
+  {path:"additem",component:AddItemComponent}
 ];
 
 @NgModule({

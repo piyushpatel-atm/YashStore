@@ -1,0 +1,16 @@
+.formclass {
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 300px;
+    padding-top: 20px;
+    height: 500px;
+    width:800px;
+    background-color: #d5cfcf;
+    color: rgba(146, 142, 137, 0.721);
+    box-shadow: 12px 12px 12px gray;
+     background-image: url("https://wallpapercave.com/wp/wp3028212.jpg")
+}
+mat-form-field{
+    width: 300px;
+    padding-right: 20px;
+}
