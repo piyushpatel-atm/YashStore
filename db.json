@@ -1,0 +1,21 @@
+{
+  "allProduct": [
+    {
+      "id": 1,
+      "url": "json-server",
+      "Price": 200,
+      "name":"Cover"
+
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

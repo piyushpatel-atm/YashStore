@@ -1,0 +1,31 @@
+<div class="formclass">
+    
+    <form [formGroup]="emp">
+        <h1 style="color: black;">Add Product</h1><br>
+        <mat-form-field>
+            <input matInput placeholder="itemName" apperance="fill" formControlName="itemName">
+            <mat-icon matTextSuffix>name</mat-icon>
+            <mat-label>ItemName</mat-label>
+            <!-- <mat-error *ngIf="this.emp.controls['fullName'].hasError('required')">required</mat-error>
+            <mat-error *ngIf="this.emp.controls['fullName'].hasError('minlength')">min 6 length required</mat-error>
+            <mat-error *ngIf="this.emp.controls['fullName'].hasError('maxlength')">mxn 32 length required</mat-error> -->
+
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Price" apperance="fill" formControlName="price">
+            <mat-icon matTextSuffix>price</mat-icon>
+            <mat-label>Price</mat-label>
+            <!-- <mat-error *ngIf="this.emp.controls['emailId'].hasError('required')">required</mat-error>
+            <mat-error *ngIf="this.emp.controls['emailId'].hasError('email')">Email is Invalid</mat-error> -->
+        </mat-form-field><br>
+        <mat-form-field>
+            <input matInput placeholder="itemURL" apperance="fill" formControlName="itemUrl">
+            <mat-icon matTextSuffix>url</mat-icon>
+            <mat-label>ItemUrl</mat-label>
+            <!-- <mat-error *ngIf="this.emp.controls['username'].hasError('required')">required</mat-error> -->
+        </mat-form-field><br>
+        <button mat-raised-button color="warn" type="submit">submit</button>
+
+    </form>
+</div>
+
