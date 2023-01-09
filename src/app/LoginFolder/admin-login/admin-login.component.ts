@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-login',
@@ -7,7 +8,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./admin-login.component.css']
 })
 export class AdminLoginComponent implements OnInit{
-  constructor(private cs:FormBuilder){}
+  constructor(private cs:FormBuilder,private router:Router){}
   adminForm!:FormGroup;
   hide:boolean=true;
   ngOnInit(){
@@ -18,7 +19,7 @@ export class AdminLoginComponent implements OnInit{
 
   }
   submit(){
-    console.log(this.adminForm.value);
+    this.router.navigate(['navbar'])
   }
 
 

@@ -5,4 +5,10 @@ export interface User {
     photoURL: string;
     emailVerified: boolean;
   }
+export interface itemmodule{
+  id:number;
+  price:string;
+  itemUrl:string;
+  name:string
+}
   
