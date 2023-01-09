@@ -1,29 +1,5 @@
 
-<mat-sidenav-container fullscreen>
-
-    <mat-toolbar color="primary">
-        <a mat-button><mat-icon matSuffix>home</mat-icon>
-            <mat-label>Home</mat-label>
-        </a>
-        <a mat-button><mat-icon matSuffix>person</mat-icon>
-            <mat-label>Login</mat-label>
-        </a>
-        <a mat-button><mat-icon matSuffix>add</mat-icon>
-            <mat-label>Register</mat-label>
-        </a>
-        <a mat-button><mat-icon matSuffix>shopping_cart</mat-icon>
-            <mat-label>Cart</mat-label>
-        </a>
-
-
-
-    </mat-toolbar>
-
-
-
-
-    <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-
+<div>
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
@@ -35,7 +11,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-                <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71cQMXCLSvL._SX3000_.jpg"
+                <img src="https://media.istockphoto.com/id/1133980246/photo/shopping-online-concept-shopping-service-on-the-online-web-with-payment-by-credit-card-and.jpg?s=612x612&w=0&k=20&c=joeQ74hTCWThhW6XfnBsCUc5Qp3YB868J-hyBWxGSUM="
                     class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>First slide label</h5>
@@ -43,7 +19,7 @@
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/61RvHn0+pAL._SX3000_.jpg"
+                <img src="https://images01.nicepagecdn.com/page/45/94/website-template-preview-45949.jpg"
                     class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Second slide label</h5>
@@ -51,7 +27,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="https://m.media-amazon.com/images/W/WEBP_402378-T1/images/I/71qlKqpJnlL._SX3000_.jpg"
+                <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/10/Ecommerce-website-design.jpg?auto=format&q=60&w=1860&h=1090&fit=crop&crop=faces"
                     class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Third slide label</h5>
@@ -67,29 +43,43 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    </div> -->
-    <div class="productFrame" *ngFor="let i of array">
-        <div class="listproduct" >
-            <mat-card class="example-card">
-                <mat-card-header>
-                  <div mat-card-avatar class="example-header-image"></div>
-                  <mat-card-title>Shiba Inu</mat-card-title>
-                  <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src={{i}} alt="Photo of a Shiba Inu" class="img">
-                <!-- <mat-card-content>
-                </mat-card-content> -->
-                <mat-card-actions>
-                  <button mat-raised-button color="warn">Add</button>
-                  <button mat-raised-button color="warn">Details></button>
-                </mat-card-actions>
-              </mat-card>
-              
+    </div> 
 
-            <!-- <button mat-raised-button color="warn">Details</button>
-            <button mat-raised-button color="warn" (click)="add(i)">Add</button> -->
 
+</div>
+
+
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div class="col mb-5" *ngFor="let products of productList">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{products.productImg}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">
+                             <a routerLink="view-product/{{products.productId}}">  {{products.productName}} </a> 
+                            </h5>
+                            <!-- Product price-->
+                            {{products. price}}
+                        </div>
+                    </div>
+                   
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" routerLink="view-product/{{products.productId}}">View Details</a></div>
+                        <div class="text-center">
+                            <a class="btn btn-outline-dark mt-auto" href="#">Add To Cart</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
         </div>
-
     </div>
-    <router-outlet></router-outlet>
+</section>

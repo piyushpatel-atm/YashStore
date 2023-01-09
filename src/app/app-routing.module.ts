@@ -6,10 +6,11 @@ import { DashboardComponent } from './LoginFolder/dashboard/dashboard.component'
 import { ForgotPasswordComponent } from './LoginFolder/forgot-password/forgot-password.component';
 import { SignInComponent } from './LoginFolder/sign-in/sign-in.component';
 import { SignUpComponent } from './LoginFolder/sign-up/sign-up.component';
+import { VerifyEmailComponent } from './LoginFolder/verify-email/verify-email.component';
+import { ListOrderComponent } from './product-module/list-order/list-order.component';
 import { VerifyEmailComponent } from './LoginFolder/verify-email/verify-email.component';import { NavbarcompComponent } from './navbarcomp/navbarcomp.component';
 import { AdminDashboardComponent } from './AdminCrud/admin-dashboard/admin-dashboard.component';
 import { AddItemComponent } from './AdminCrud/add-item/add-item.component';
-
 const routes: Routes = [
   // { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
@@ -18,6 +19,8 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
   { path: 'adminlogin',component:AdminLoginComponent},
+  { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
+  {path:'order', component:ListOrderComponent},
   {path:"",component:NavbarcompComponent},
   {path:"dashboard",component:DashboardComponent},
   {path:"adminDashboard",component:AdminDashboardComponent},
