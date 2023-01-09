@@ -8,7 +8,11 @@ export interface User {
 export interface itemmodule{
   id:number;
   price:string;
-  itemUrl:string;
-  name:string
+  categoryId:string;
+  productName:string;
+  description:string;
+  rating:string;
+  productImg:string;  
+  isAvailble:boolean;
 }
   

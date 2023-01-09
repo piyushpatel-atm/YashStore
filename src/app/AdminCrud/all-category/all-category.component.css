@@ -1,0 +1,22 @@
+.productFrame{
+    height: 230px;
+    width:220px;
+    box-shadow: 5px 5px 5px gray;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    margin: 10px;
+}
+img{
+   height: 150px; 
+}
+.upernav{
+    background-color: rgb(147, 57, 233);
+    height: 60px;
+}
+.listProduct{
+    background-image: url("https://img.freepik.com/free-photo/cyber-monday-shopping-sales_23-2148688502.jpg?w=2000");
+ background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
