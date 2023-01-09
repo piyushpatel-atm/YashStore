@@ -25,6 +25,11 @@ import { SignUpComponent } from './LoginFolder/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './LoginFolder/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './LoginFolder/verify-email/verify-email.component';
 import { DashboardComponent } from './LoginFolder/dashboard/dashboard.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductModuleModule } from './product-module/product-module.module';
+import { AdminRegisterComponent } from './LoginFolder/admin-register/admin-register.component';
+
 import { AdminDashboardComponent } from './AdminCrud/admin-dashboard/admin-dashboard.component';
 import { AddItemComponent } from './AdminCrud/add-item/add-item.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -43,6 +48,7 @@ import { UpdateItemComponent } from './AdminCrud/update-item/update-item.compone
     SignUpComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
+    DashboardComponent
     DashboardComponent,
     DashboardComponent,
     HeaderComponent,
@@ -55,6 +61,7 @@ import { UpdateItemComponent } from './AdminCrud/update-item/update-item.compone
     
 
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -65,6 +72,20 @@ import { UpdateItemComponent } from './AdminCrud/update-item/update-item.compone
     AngularFireStorageModule,
     AngularFireDatabaseModule,MaterialModule,MatIconModule
   ],
+
+  imports:[
+      BrowserModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,MaterialModule,FormsModule,ReactiveFormsModule,HttpClientModule,
+      AngularFireModule.initializeApp(enviroment.firebase),
+      AngularFireAuthModule,
+      AngularFirestoreModule,
+      AngularFireStorageModule,
+      AngularFireDatabaseModule,
+      ProductModuleModule,
+      HttpClientModule
+    ],
+
   providers: [AuthService],
   bootstrap: [AppComponent]
 })
