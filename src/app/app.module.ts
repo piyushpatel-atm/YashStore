@@ -25,6 +25,7 @@ import { ForgotPasswordComponent } from './LoginFolder/forgot-password/forgot-pa
 import { VerifyEmailComponent } from './LoginFolder/verify-email/verify-email.component';
 import { DashboardComponent } from './LoginFolder/dashboard/dashboard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductModuleModule } from './product-module/product-module.module';
 
 
 @NgModule({
@@ -39,19 +40,22 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SignUpComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
-    DashboardComponent,
+    DashboardComponent
+   
+ 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,MaterialModule,FormsModule,ReactiveFormsModule,HttpClientModule,
-    AngularFireModule.initializeApp(enviroment.firebase),
-    AngularFireAuthModule,
-    AngularFirestoreModule,
-    AngularFireStorageModule,
-    AngularFireDatabaseModule,,
-    NgbModule
-  ],
+  imports:[
+      BrowserModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,MaterialModule,FormsModule,ReactiveFormsModule,HttpClientModule,
+      AngularFireModule.initializeApp(enviroment.firebase),
+      AngularFireAuthModule,
+      AngularFirestoreModule,
+      AngularFireStorageModule,
+      AngularFireDatabaseModule,
+      ProductModuleModule,
+      HttpClientModule
+    ],
   providers: [AuthService],
   bootstrap: [AppComponent]
 })
