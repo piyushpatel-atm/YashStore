@@ -1,16 +1,15 @@
-<div class="outerdiv">
 <div class="formclass">
-    <form [formGroup]="item" (ngSubmit)="submit()" class="p-3 text-bg-dark">
-        <h1 style="color:white">Add Item</h1><br>
+    <form [formGroup]="item" (ngSubmit)="submit()" class="p-4 text-bg-dark">
+        <h1 style="color:white">Update Product</h1><br>
         <mat-form-field class="md col-6">
             <input matInput placeholder="Name" apperance="fill" formControlName="productName">
-            <mat-icon matTextSuffix>name</mat-icon>
+            <mat-icon matTextSuffix>productName</mat-icon>
             <mat-label>ItemName</mat-label>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="ItemUrl" apperance="fill" formControlName="productImg">
-            <mat-icon matTextSuffix>url</mat-icon>
-            <mat-label>ItemUrl</mat-label>           
+            <input matInput placeholder="productImg" apperance="fill" formControlName="productImg">
+            <mat-icon matTextSuffix>image</mat-icon>
+            <mat-label>productImg</mat-label>           
         </mat-form-field><br>        
         <mat-form-field>
             <input matInput placeholder="Price" apperance="fill" formControlName="price">
@@ -18,29 +17,28 @@
             <mat-label>Price</mat-label>         
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="categoryId" apperance="fill" formControlName="categoryId">
+            <input matInput placeholder="Price" apperance="fill" formControlName="categoryId">
             <mat-icon matTextSuffix>category</mat-icon>
             <mat-label>categoryId</mat-label>         
         </mat-form-field><br>
         <mat-form-field>
-            <input matInput placeholder="description" apperance="fill" formControlName="description">
+            <input matInput placeholder="Price" apperance="fill" formControlName="description">
             <mat-icon matTextSuffix>description</mat-icon>
             <mat-label>description</mat-label>         
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="rating" apperance="fill" formControlName="rating">
+            <input matInput placeholder="Price" apperance="fill" formControlName="rating">
             <mat-icon matTextSuffix>rating</mat-icon>
             <mat-label>rating</mat-label>         
         </mat-form-field><br>
         <mat-form-field>
-            <input matInput placeholder="isAvailble" apperance="fill" formControlName="isAvailble">
+            <input matInput placeholder="Price" apperance="fill" formControlName="isAvailble">
             <mat-icon matTextSuffix>isAvailble</mat-icon>
             <mat-label>isAvailble</mat-label>         
         </mat-form-field><br>
-        <button mat-raised-button color="warn" type="submit">Add</button>
+        <button mat-raised-button color="warn" type="submit">Update</button>
 
     </form>
 
 </div>
 
-</div>

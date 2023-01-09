@@ -1,13 +1,12 @@
 form{
-    margin-top: 20px;
-    background-color: white;
+    margin-top: 50px;
     margin-left: 350px;
-    height: 650px;
+    height: 700px;
     width: 800px;
     border: 2px solid rgb(24, 23, 23);
     text-align: center;
+    box-shadow: -10px 10px 10px gray;
     border-radius: 20px;
-    
 }
 mat-form-field{
  height: 80px;

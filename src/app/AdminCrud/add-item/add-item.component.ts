@@ -11,21 +11,20 @@ import { AdminDashboardComponent } from '../admin-dashboard/admin-dashboard.comp
   styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit{
-  clickEventsubscription!: Subscription;
-  constructor(private cs:FormBuilder,public fb:ProductServiceService,public router:Router){
-    this.clickEventsubscription=this.fb.getClickEvent().subscribe((data)=>
-    {this.setdata()
-    this.open()}
-    )
-  }
+  constructor(private cs:FormBuilder,public fb:ProductServiceService,public router:Router){}
+  
   
   item!:FormGroup;
   list!:any[]
   ngOnInit(): void {
     this.item=this.cs.group({
       price:['',Validators.required],
-      itemUrl:['',Validators.required],
-      name:['',Validators.required]
+      productImg:['',Validators.required],
+      productName:['',Validators.required],
+      categoryId:[''],
+      description:[''],
+      rating:[''],
+      isAvailble:['']
     })
    
   }
@@ -34,9 +33,10 @@ export class AddItemComponent implements OnInit{
     {
     this.fb.setItemValue(this.item.value).subscribe();
     window.alert("Add succesfully");
-    this.router.navigate(['adminDashboard']);
+    this.router.navigate(['category'])
    }else{
     window.alert("invalid data")
+    window.location.reload();
    }
   }
   setdata(){

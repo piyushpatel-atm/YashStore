@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarcompComponent } from './navbarcomp/navbarcomp.component';
-import { AdminLoginComponent } from './LoginFolder/admin-login/admin-login.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -26,15 +25,17 @@ import { SignUpComponent } from './LoginFolder/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './LoginFolder/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './LoginFolder/verify-email/verify-email.component';
 import { DashboardComponent } from './LoginFolder/dashboard/dashboard.component';
-import { AdminRegisterComponent } from './LoginFolder/admin-register/admin-register.component';
 import { AdminDashboardComponent } from './AdminCrud/admin-dashboard/admin-dashboard.component';
 import { AddItemComponent } from './AdminCrud/add-item/add-item.component';
+import { MatIconModule } from '@angular/material/icon';
+import { LoginAdminComponent } from './AdminCrud/login-admin/login-admin.component';
+import { AllCategoryComponent } from './AdminCrud/all-category/all-category.component';
+import { UpdateItemComponent } from './AdminCrud/update-item/update-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarcompComponent,
-    AdminLoginComponent,
     FooterComponent,
     HeaderComponent,
     PageNotFoundErrorComponent,
@@ -43,12 +44,15 @@ import { AddItemComponent } from './AdminCrud/add-item/add-item.component';
     ForgotPasswordComponent,
     VerifyEmailComponent,
     DashboardComponent,
-    AdminRegisterComponent,
     DashboardComponent,
     HeaderComponent,
      FooterComponent,
      AdminDashboardComponent,
      AddItemComponent,
+     LoginAdminComponent,
+     AllCategoryComponent,
+     UpdateItemComponent,
+    
 
   ],
   imports: [
@@ -59,7 +63,7 @@ import { AddItemComponent } from './AdminCrud/add-item/add-item.component';
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireDatabaseModule,
+    AngularFireDatabaseModule,MaterialModule,MatIconModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
