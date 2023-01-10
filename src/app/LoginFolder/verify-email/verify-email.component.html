@@ -1,39 +1,64 @@
-<div class="displayTable">
-    <div class="displayTableCell">
-      <div class="authBlock">
-        <h3>Thank You for Registering</h3>
+  <div class="main-container">
+    <section class="vh-100" style="background-color: #eee">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-lg-8 col-xl-15">
+            <div class="card text-black" style="border-radius: 25px">
+              <div class="card-body p-md-5">
+                <div class="row justify-content-center">
+                  <div class="col-md-10 col-lg-6 col-xl-6 order-2 order-lg-1">
+                    <p class="text-center h1 fw-bold mb-5 mx-1 mt-1">
+                      Thank You for Registering
+                    </p>
+                    <div class="formGroup" *ngIf="authService.userData as user">
+                      <p class="text-center">
+                        We have sent a confirmation email to <strong>{{ user.email }}</strong
+                        >.
+                      </p>
+                      <p class="text-center">
+                        Please check your email and click on the link to verfiy your email
+                        address.
+                      </p>
+                    </div>
+              
+                    <!-- Calling SendVerificationMail() method using authService Api -->
+                    <div class="formGroup">
+                      <button
+                        type="button"
+                        class="btn btnPrimary"
+                        (click)="authService.SendVerificationMail()"
+                      >
+                        <i class="fas fa-redo-alt"></i>
+                        Resend Verification Email
+                      </button>
+                    </div>
+                    <div class="redirectToLogin">
+                      <span
+                        >Already have an account?<span
+                          class="redirect"
+                          routerLink="/sign-in"
+                        >
+                          Sign In</span
+                        ></span
+                      >
+                    </div>
+                  </div>
   
-        <div class="formGroup" *ngIf="authService.userData as user">
-          <p class="text-center">
-            We have sent a confirmation email to <strong>{{ user.email }}</strong
-            >.
-          </p>
-          <p class="text-center">
-            Please check your email and click on the link to verfiy your email
-            address.
-          </p>
-        </div>
-  
-        <!-- Calling SendVerificationMail() method using authService Api -->
-        <div class="formGroup">
-          <button
-            type="button"
-            class="btn btnPrimary"
-            (click)="authService.SendVerificationMail()"
-          >
-            <i class="fas fa-redo-alt"></i>
-            Resend Verification Email
-          </button>
+                  <div
+                    class="col-md-10 col-lg-3 col-xl-6 d-flex align-items-center order-1 order-lg-2"
+                  >
+                    <img
+                    src="https://img.freepik.com/free-photo/cyber-monday-shopping-sales_23-2148688502.jpg?w=2000"
+                      class="img-fluid"
+                      alt="Sample image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-  
-      <div class="redirectToLogin">
-        <span
-          >Go back to?<span class="redirect" routerLink="/sign-in">
-            Sign in</span
-          ></span
-        >
-      </div>
-    </div>
+    </section>
   </div>
   

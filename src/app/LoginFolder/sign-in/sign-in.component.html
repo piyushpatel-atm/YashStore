@@ -1,67 +1,131 @@
-<div class="displayTable">
-  <div class="displayTableCell">
-    <div class="authBlock">
-      <h3>Sign In</h3>
-      <div class="formGroup">
-        <input
-          type="text"
-          class="formControl"
-          placeholder="Username"
-          #userName
-          required
-        />
-      </div>
+<div class="main-container">
+  <section class="vh-100" style="background-color: #eee">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-15">
+          <div class="card text-black" style="border-radius: 25px">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mt-1">
+                    User Login
+                  </p>
 
-      <div class="formGroup">
-        <input
-          type="password"
-          class="formControl"
-          placeholder="Password"
-          #userPassword
-          required
-        />
-      </div>
+                  <div>
+                    <form [formGroup]="empForm" (ngSubmit)="OnSubmit()">
+                      <mat-form-field appearance="fill">
+                        <mat-label>Enter your email</mat-label>
 
-      <!-- Calling SignIn Api from AuthService -->
-      <div class="formGroup">
-        <input
-          type="button"
-          class="btn btnPrimary"
-          value="Log in"
-          (click)="authService.SignIn(userName.value, userPassword.value)"
-        />
-      </div>
+                        <mat-icon matSuffix class="material-icon"
+                          >email</mat-icon
+                        >
 
-      <div class="formGroup">
-        <span class="or"><span class="orInner">Or</span></span>
-      </div>
+                        <input
+                          matInput
+                          placeholder="pat@example.com"
+                          formControlName="email"
+                          required
+                        />
 
-      <!-- Calling GoogleAuth Api from AuthService -->
-      <div class="formGroup">
-        <button
-          type="button"
-          class="btn googleBtn"
-          (click)="authService.GoogleAuth()"
-        >
-          <i class="fab fa-google-plus-g"></i>
-          Log in with Google
-        </button>
-      </div>
+                        <mat-error
+                          *ngIf="
+                            empForm.controls['email'].invalid &&
+                            empForm.controls['email'].hasError('required')
+                          "
+                          >You must enter a valid email</mat-error
+                        >
+                      </mat-form-field>
 
-      <div class="forgotPassword">
-        <span routerLink="/forgot-password">Forgot Password?</span>
+                      <mat-form-field appearance="fill">
+                        <mat-label>Enter your password</mat-label>
+
+                        <input
+                          matInput
+                          [type]="hide ? 'password' : 'text'"
+                          formControlName="password"
+                        />
+
+                        <button
+                          mat-icon-button
+                          matSuffix
+                          (click)="hide = !hide"
+                          [attr.aria-label]="'Hide password'"
+                          [attr.aria-pressed]="hide"
+                        >
+                          <mat-icon>{{
+                            hide ? "visibility_off" : "visibility"
+                          }}</mat-icon>
+                        </button>
+
+                        <mat-error
+                          *ngIf="
+                            empForm.controls['password'].invalid &&
+                            empForm.controls['password'].hasError('required')
+                          "
+                        >
+                          Valid Password only Alphabet & numeric
+                        </mat-error>
+                      </mat-form-field>
+
+                      <br />
+
+                      <div
+                        class="d-flex justify-content-center mx-4 mb-3 mb-lg-4"
+                      >
+                        <button
+                          mat-raised-button
+                          color="warn"
+                          style="margin-top: 10px"
+                        >
+                          Sign In
+                        </button>
+                      </div>
+                    </form>
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button
+                        type="button"
+                        mat-raised-button
+                        color="basic"
+                        (click)="authService.GoogleAuth()"
+                      >
+                        <i class="fab fa-google-plus-g"></i>
+                        Log in with Google
+                      </button>
+                    </div>
+                    <div class="forgotPassword">
+                      <span routerLink="/forgot-password">Forgot Password?</span>
+                    </div>
+    
+                    <div class="redirectToLogin">
+                      <span
+                        >Don't have an account?<span
+                          class="redirect"
+                          routerLink="/register-user"
+                        >
+                          Sign Up</span
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="col-md-10 col-lg-3 col-xl-7 d-flex align-items-center order-1 order-lg-2"
+                >
+                  <img
+                    src="https://img.freepik.com/free-photo/cyber-monday-shopping-sales_23-2148688502.jpg?w=2000"
+                    class="img-fluid"
+                    alt="Sample image"
+                  />
+                </div>
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="redirectToLogin">
-      <span
-        >Don't have an account?<span
-          class="redirect"
-          routerLink="/register-user"
-        >
-          Sign Up</span
-        ></span
-      >
-    </div>
-  </div>
+  </section>
 </div>
+

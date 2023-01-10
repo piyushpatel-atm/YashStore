@@ -33,39 +33,40 @@
         <a mat-button routerLink="products"><mat-icon matSuffix>home</mat-icon>
             <mat-label>Home</mat-label>
         </a>
-        <a mat-button><mat-icon matSuffix>person</mat-icon>
+        <a *ngIf="!authService.isLoggedIn && !authService.isAdminLogin.value" mat-button routerLink="sign-in"><mat-icon matSuffix>person</mat-icon>
             <mat-label>Login</mat-label>
         </a>
-        <a mat-button><mat-icon matSuffix>add</mat-icon>
+        <a *ngIf="authService.isLoggedIn && !authService.isAdminLogin.value" mat-button routerLink="/cartItem"><mat-icon matSuffix>shopping_cart</mat-icon>
+            <mat-label> {{userName | titlecase}}</mat-label>
+        </a>
+        <a *ngIf="authService.isLoggedIn || authService.isAdminLogin.value" mat-button (click)="authService.SignOut()"><mat-icon matSuffix>logout</mat-icon>
+            <mat-label>Logout</mat-label>
+        </a>
+        <!-- <a mat-button><mat-icon matSuffix>add</mat-icon>
             <mat-label>Register</mat-label>
         </a>
-        <a mat-button routerLink="/cartItem"><mat-icon matSuffix>shopping_cart</mat-icon>
-            <mat-label>Cart</mat-label>
-        </a>
+    -->
      
-        <a  mat-button [matMenuTriggerFor]="adminDropdown"><mat-icon matSuffix>person</mat-icon>
+        <!-- <a  mat-button [matMenuTriggerFor]="adminDropdown"><mat-icon matSuffix>person</mat-icon>
             <mat-label>Admin </mat-label>
-        </a>
+        </a> 
         <mat-menu #adminDropdown  >
       
       
-            <div class="list-group">
-                <a routerLink="/additem" class="list-group-item">Add Item</a>
-            </div>
-            <div class="list-group">
-                <a routerLink="category" class="list-group-item">List All</a>
-            </div>
+            <div class="list-group"> -->
+                <a *ngIf="authService.isAdminLogin.value" routerLink="/additem" mat-button class="list-group-item">Add Item</a>
+            <!-- </div> -->
+            <!-- <div class="list-group"> -->
+                <a *ngIf="authService.isAdminLogin.value" routerLink="category" mat-button class="list-group-item">List All</a>
+            <!-- </div>
             <router-outlet></router-outlet>
-        </mat-menu>
+        </mat-menu> -->
     
     </mat-toolbar>
   
-
-
-
     <router-outlet></router-outlet>
 </mat-sidenav-container> 
- 
+
 <!-- <app-header></app-header>
 
 <main  >

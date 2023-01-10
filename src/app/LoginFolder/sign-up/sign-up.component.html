@@ -1,60 +1,169 @@
-<div class="displayTable">
-    <div class="displayTableCell">
-      <div class="authBlock">
-        <h1 style="color: white;">Sign Up</h1>
-  
-        <div class="formGroup">
-          <input
-            type="email"
-            class="formControl"
-            placeholder="Email Address"
-            #userEmail
-            required
-          />
+<div class="main-container">
+  <section class="vh-100" style="background-color: #eee">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-15">
+          <div class="card text-black" style="border-radius: 25px">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-6 order-2 order-lg-1">
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mt-1">
+                    User Sign up
+                  </p>
+
+                  <div>
+                    <form [formGroup]="empForm" (ngSubmit)="OnSubmit()">
+                      <mat-form-field
+                        appearance="fill"
+                        style="margin-right: 10px"
+                      >
+                        <mat-label>FullName</mat-label>
+
+                        <mat-icon matSuffix class="material-icon"
+                          >people</mat-icon
+                        >
+
+                        <input
+                          matInput
+                          placeholder="Enter FullName"
+                          formControlName="name"
+                        />
+
+                        <mat-error
+                          *ngIf="
+                            empForm.controls['name'].invalid &&
+                            empForm.controls['name'].hasError('required')
+                          "
+                          >You must enter a atleat 6 character</mat-error
+                        >
+                      </mat-form-field>
+
+                      <mat-form-field appearance="fill">
+                        <mat-label>Enter your email</mat-label>
+
+                        <mat-icon matSuffix class="material-icon"
+                          >email</mat-icon
+                        >
+
+                        <input
+                          matInput
+                          placeholder="pat@example.com"
+                          formControlName="email"
+                          required
+                        />
+
+                        <mat-error
+                          *ngIf="
+                            empForm.controls['email'].invalid &&
+                            empForm.controls['email'].hasError('required')
+                          "
+                          >You must enter a valid email</mat-error
+                        >
+                      </mat-form-field>
+
+                      <mat-form-field appearance="fill">
+                        <mat-label>Enter your password</mat-label>
+
+                        <input
+                          matInput
+                          [type]="hide ? 'password' : 'text'"
+                          formControlName="password"
+                        />
+
+                        <button
+                          mat-icon-button
+                          matSuffix
+                          (click)="hide = !hide"
+                          [attr.aria-label]="'Hide password'"
+                          [attr.aria-pressed]="hide"
+                        >
+                          <mat-icon>{{
+                            hide ? "visibility_off" : "visibility"
+                          }}</mat-icon>
+                        </button>
+
+                        <mat-error
+                          *ngIf="
+                            empForm.controls['password'].invalid &&
+                            empForm.controls['password'].hasError('required')
+                          "
+                        >
+                          Valid Password only Alphabet & numeric
+                        </mat-error>
+                      </mat-form-field>
+
+                      <mat-form-field appearance="fill">
+                        <mat-label>Mobile No</mat-label>
+
+                        <mat-icon matSuffix class="material-icon"
+                          >phone</mat-icon
+                        >
+
+                        <input matInput formControlName="mob" />
+
+                        <mat-error
+                          *ngIf="
+                            empForm.controls['mob'].invalid &&
+                            empForm.controls['mob'].hasError('required')
+                          "
+                          >You must enter a Mobile No.</mat-error
+                        >
+                      </mat-form-field>
+
+                      <br />
+
+                      
+
+                      <div
+                        class="d-flex justify-content-center mx-4 mb-3 mb-lg-4"
+                      >
+                        <button
+                          mat-raised-button
+                          color="warn"
+                          style="margin-top: 10px"
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </form>
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button
+                        type="button"
+                        mat-raised-button
+                        color="basic"
+                        (click)="signUpWithGoogle()"
+                      >
+                        <i class="fab fa-google-plus-g"></i>
+                        Continue with Google
+                      </button>
+                    </div>
+                    <div class="redirectToLogin">
+                      <span
+                        >Already have an account?<span
+                          class="redirect"
+                          routerLink="/sign-in"
+                        >
+                          Sign In</span
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="col-md-10 col-lg-3 col-xl-6 d-flex align-items-center order-1 order-lg-2"
+                >
+                  <img
+                  src="https://img.freepik.com/free-photo/cyber-monday-shopping-sales_23-2148688502.jpg?w=2000"
+                    class="img-fluid"
+                    alt="Sample image"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-  
-        <div class="formGroup">
-          <input
-            type="password"
-            class="formControl"
-            placeholder="Password"
-            #userPwd
-            required
-          />
-        </div>
-  
-        <div class="formGroup">
-          <input
-            type="button"
-            class="btn btnPrimary"
-            value="Sign Up"
-            (click)="authService.SignUp(userEmail.value, userPwd.value)"
-          />
-        </div>
-  
-        <div class="formGroup">
-          <span class="or"><span class="orInner">Or</span></span>
-        </div>
-  
-        <!-- Continue with Google -->
-        <div class="formGroup">
-          <button
-            type="button"
-            class="btn googleBtn"
-            (click)="authService.GoogleAuth()"
-          >
-            <i class="fab fa-google-plus-g"></i>
-            Continue with Google
-          </button>
-        </div>
-      </div>
-  
-      <div class="redirectToLogin">
-        <h2 style="color: white;"
-          >Already have an account?
-          <span class="redirect" routerLink="/sign-in">Log In</span></h2
-        >
       </div>
     </div>
-  </div>
-  
+  </section>
+</div>
