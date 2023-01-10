@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, TitleStrategy } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { ProductServiceService } from 'src/app/product-service.service';
 import { Category } from '../category';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
@@ -13,8 +15,12 @@ export class ViewProductByCategoryComponent implements OnInit {
   searchCategory!:Category
   // categoryId!:string
   productList!:Product[];
-  constructor(private activatedRoute:ActivatedRoute, private productservice:ProductService){}
-
+  constructor(private activatedRoute:ActivatedRoute,private cs:ProductServiceService, private productservice:ProductService,private toastr:ToastrService){}
+  addCart(data:any){
+    this.cs.setCartData(data).subscribe();
+    this.toastr.success("Item is added in cart successfully")
+    
+  }
     // OnClick(categoryId:any){
     //   this.productservice.searchCategoryProduct(categoryId).subscribe(
     //     list=>{this.productList=list; 
@@ -30,6 +36,7 @@ export class ViewProductByCategoryComponent implements OnInit {
     //   console.log(this.searchCategory);
 
       let categoryId=this.activatedRoute.snapshot.paramMap.get("id");
+    
 
       this.productservice.searchCategoryProduct(categoryId).subscribe({
         next:  categoryData=>{

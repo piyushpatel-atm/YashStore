@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ProductServiceService } from 'src/app/product-service.service';
+import { ProductService } from 'src/app/products/product.service';
 import { AdminDashboardComponent } from '../admin-dashboard/admin-dashboard.component';
 
 @Component({
@@ -11,7 +12,7 @@ import { AdminDashboardComponent } from '../admin-dashboard/admin-dashboard.comp
   styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit{
-  constructor(private cs:FormBuilder,public fb:ProductServiceService,public router:Router){}
+  constructor(private cs:FormBuilder,public fb:ProductServiceService,public router:Router,public service:ProductService){}
   
   
   item!:FormGroup;
@@ -31,7 +32,8 @@ export class AddItemComponent implements OnInit{
   submit(){
     if(this.item.valid)
     {
-    this.fb.setItemValue(this.item.value).subscribe();
+    // this.fb.setItemValue(this.item.value).subscribe();
+    this.service.createProduct(this.item.value).subscribe();
     window.alert("Add succesfully");
     this.router.navigate(['category'])
    }else{

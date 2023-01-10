@@ -11,7 +11,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-                <img src="https://media.istockphoto.com/id/1133980246/photo/shopping-online-concept-shopping-service-on-the-online-web-with-payment-by-credit-card-and.jpg?s=612x612&w=0&k=20&c=joeQ74hTCWThhW6XfnBsCUc5Qp3YB868J-hyBWxGSUM="
+                <img src="https://cdn.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_960_720.jpg"
                     class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>First slide label</h5>
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-                <img src="https://images01.nicepagecdn.com/page/45/94/website-template-preview-45949.jpg"
+                <img src="https://images.pexels.com/photos/5872364/pexels-photo-5872364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Second slide label</h5>
@@ -50,36 +50,22 @@
 
 
 
-<section class="py-5">
-    <div class="container px-4 px-lg-5 mt-5">
-        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <div class="col mb-5" *ngFor="let products of productList">
-                <div class="card h-100">
-                    <!-- Product image-->
-                    <img class="card-img-top" src="{{products.productImg}}" alt="..." />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">
-                             <a routerLink="view-product/{{products.productId}}">  {{products.productName}} </a> 
-                            </h5>
-                            <!-- Product price-->
-                            {{products. price}}
-                        </div>
-                    </div>
-                   
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" routerLink="view-product/{{products.productId}}">View Details</a></div>
-                        <div class="text-center">
-                            <a class="btn btn-outline-dark mt-auto" href="#">Add To Cart</a>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+<div class="productFrame" *ngFor="let products of productList">
+   
+    <div class="listproduct">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{products.productName}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{products.productImg}} alt="Photo of a Shiba Inu" class="img">
+         <mat-card-content>
+              </mat-card-content>
+        <mat-card-actions>
+               <button mat-raised-button color="warn" (click)="addCart(products)">Cart</button>
+               <button mat-raised-button color="warn" routerLink="view-product/{{products.id}}">Details</button>
+        </mat-card-actions>
+        
+      </mat-card>
     </div>
-</section>

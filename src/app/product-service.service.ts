@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
+import { Product } from './products/product';
 import { itemmodule } from './shared/data-type';
 
 @Injectable({
@@ -12,19 +13,31 @@ export class ProductServiceService {
   url: string = "http://localhost:3000";
   setItemValue(data:itemmodule) {
     console.log(data)
-    return this.http.post<itemmodule>(this.url + "/allProduct", data);
+    return this.http.post<itemmodule>(this.url + "/product", data);
   }
   getItemValue():Observable<itemmodule[]>{
-  return this.http.get<itemmodule[]>(this.url+ "/allProduct");
+  return this.http.get<itemmodule[]>(this.url+ "/product");
   }
   deleteItemValue(id: number) {
-    return this.http.delete(this.url + "/allProduct/" + id);
+    return this.http.delete(this.url + "/product/" + id);
   }
   getItem(id:any){
-    return this.http.get<itemmodule>(this.url+"/allProduct/"+id);
+    return this.http.get<itemmodule>(this.url+"/product/"+id);
   }
   updateItem(id:number,data:itemmodule){
-    return this.http.put<itemmodule>(this.url+"/allProduct/"+id,data)
+    return this.http.put<itemmodule>(this.url+"/product/"+id,data)
   }
+
+  getCartData(){
+    return this.http.get<Product[]>(this.url+ "/cartData");
+  }
+  setCartData(data:any){
+    return this.http.post<Product>(this.url + "/cartData", data);
+  }
+  removeCartData(id:any){
+    return this.http.delete(this.url + "/cartData/" + id);
+  }
+
+
   
 }

@@ -6,7 +6,7 @@ export interface User {
     emailVerified: boolean;
   }
 export interface itemmodule{
-  id:number;
+  productId:string;
   price:string;
   categoryId:string;
   productName:string;

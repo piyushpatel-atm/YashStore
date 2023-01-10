@@ -3,10 +3,10 @@
     <h1>All Product</h1>
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">   
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-5 justify-content-center">   
+            <div class="row gx-4 gx-lg-8 row-cols-2 row-cols-md-3 row-cols-xl-5 justify-content-center">   
                 <div class="col mb-5" *ngFor="let item of list">  
                     
-                    <div class="card h-100 card-" style="border: 2px solid rgb(41, 40, 40);box-shadow: 10px 10px 10px;"> 
+                    <div class="card h-100 card-" style="border: 2px solid rgb(41, 40, 40);box-shadow: 5px 5px 5px;"> 
                         <h1>{{item.productName}}</h1>
                         <!-- Product image--> 
                         <img class="card-img-top" src={{item.productImg}} alt="..." /> 
@@ -34,15 +34,15 @@
             </div>   
         </div>   
     </section>
-<!-- <div class="productFrame" *ngFor="let item of list">
+    
    
-    <div class="listproduct">
+    <div class="listproduct" *ngFor="let item of list">
       <mat-card class="example-card">
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{item.name}}</mat-card-title>
+          <mat-card-title>{{item.productName}}</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src={{item.itemUrl}} alt="Photo of a Shiba Inu" class="img">
+        <img mat-card-image src={{item.productImg}} alt="Photo of a Shiba Inu" class="img">
          <mat-card-content>
               </mat-card-content>
         <mat-card-actions>
@@ -52,7 +52,7 @@
         </mat-card-actions>
       </mat-card>
 
-    </div> -->
+    </div>
   </div>
 
 

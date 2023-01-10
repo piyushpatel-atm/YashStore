@@ -5,9 +5,8 @@ import { DashboardComponent } from './LoginFolder/dashboard/dashboard.component'
 import { ForgotPasswordComponent } from './LoginFolder/forgot-password/forgot-password.component';
 import { SignInComponent } from './LoginFolder/sign-in/sign-in.component';
 import { SignUpComponent } from './LoginFolder/sign-up/sign-up.component';
-import { VerifyEmailComponent } from './LoginFolder/verify-email/verify-email.component';
 import { ListOrderComponent } from './product-module/list-order/list-order.component';
-import { VerifyEmailComponent } from './LoginFolder/verify-email/verify-email.component';import { NavbarcompComponent } from './navbarcomp/navbarcomp.component';
+import { VerifyEmailComponent } from './LoginFolder/verify-email/verify-email.component';
 import { AdminDashboardComponent } from './AdminCrud/admin-dashboard/admin-dashboard.component';
 import { AddItemComponent } from './AdminCrud/add-item/add-item.component';
 
@@ -16,6 +15,8 @@ import { AllCategoryComponent } from './AdminCrud/all-category/all-category.comp
 import { UpdateItemComponent } from './AdminCrud/update-item/update-item.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ViewProductByCategoryComponent } from './products/view-product-by-category/view-product-by-category.component';
+import { CartModuleComponent } from './cart-module/cart-module/cart-module.component';
 
 
 const routes: Routes = [
@@ -25,18 +26,16 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
-  {path:"ttt",component:NavbarcompComponent},
-=======
-  { path: 'adminlogin',component:AdminLoginComponent},
-  { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
+  { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) ,canActivate:[AuthGuard]},
   {path:'order', component:ListOrderComponent},
-  {path:"",component:NavbarcompComponent},
   {path:"dashboard",component:DashboardComponent},
   {path:"adminDashboard",component:AdminDashboardComponent},
   {path:"additem",component:AddItemComponent},
   {path:"Loginadmin",component:LoginAdminComponent},
   {path:"category",component:AllCategoryComponent},
   {path:"updateItem/:id",component:UpdateItemComponent},
+  {path:"cartItem",component:CartModuleComponent,canActivate:[AuthGuard]}
+  // {path:"products/view-product-by-category/:id",component:ViewProductByCategoryComponent}
 ];
 
 @NgModule({

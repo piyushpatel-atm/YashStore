@@ -1,0 +1,8 @@
+.Cartdiv{
+    float: left;
+    margin: 10px;
+}
+.card img{
+    height: 250px;
+    width: 250px;
+}

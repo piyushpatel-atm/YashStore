@@ -1,6 +1,9 @@
 <div class="formclass">
-    <form [formGroup]="item" (ngSubmit)="submit()" class="p-4 text-bg-dark">
-        <h1 style="color:white">Update Product</h1><br>
+    <div class="col-md-3">
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-5521508-4610092.png">
+    </div>
+    <form [formGroup]="item" (ngSubmit)="submit()" class="p-4 text-bg-light">
+        <h1 style="color:black">Update Product</h1><br>
         <mat-form-field class="md col-6">
             <input matInput placeholder="Name" apperance="fill" formControlName="productName">
             <mat-icon matTextSuffix>productName</mat-icon>
@@ -27,7 +30,7 @@
             <mat-label>description</mat-label>         
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Price" apperance="fill" formControlName="rating">
+            <input matInput placeholder="rating" apperance="fill" formControlName="rating">
             <mat-icon matTextSuffix>rating</mat-icon>
             <mat-label>rating</mat-label>         
         </mat-form-field><br>

@@ -9,16 +9,19 @@ import {Product} from './product';
 export class ProductService {
 
   constructor(private httpClient:HttpClient) { }
-
+  baseUrl:string="http://localhost:3000";
   createProduct(productBody: any):Observable<Product[]>
   {
     const baseUrl="http://localhost:3000/product";
     return this.httpClient.post<Product[]>(baseUrl,productBody);
   }
+  getItem(id:any){
+    return this.httpClient.get<Product>(this.baseUrl+"/product/"+id);
+  }
 
-  viewProduct(categoryId:string):Observable<Product[]>
+  viewProduct(categoryId:any):Observable<Product[]>
   {
-    const baseUrl="http://localhost:3000/product?productId="+categoryId;
+    const baseUrl="http://localhost:3000/product?id="+categoryId;
     return this.httpClient.get<Product[]>(baseUrl);
   }
   viewAllProduct():Observable<Product[]>

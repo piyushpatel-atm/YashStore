@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductServiceService } from 'src/app/product-service.service';
+import { Product } from 'src/app/products/product';
 import { itemmodule } from 'src/app/shared/data-type';
 
 @Component({

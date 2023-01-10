@@ -1,46 +1,49 @@
-<div class="outerdiv">
-<div class="formclass">
-    <form [formGroup]="item" (ngSubmit)="submit()" class="p-3 text-bg-dark">
-        <h1 style="color:white">Add Item</h1><br>
-        <mat-form-field class="md col-6">
-            <input matInput placeholder="Name" apperance="fill" formControlName="productName">
-            <mat-icon matTextSuffix>name</mat-icon>
-            <mat-label>ItemName</mat-label>
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="ItemUrl" apperance="fill" formControlName="productImg">
-            <mat-icon matTextSuffix>url</mat-icon>
-            <mat-label>ItemUrl</mat-label>           
-        </mat-form-field><br>        
-        <mat-form-field>
-            <input matInput placeholder="Price" apperance="fill" formControlName="price">
-            <mat-icon matTextSuffix>price</mat-icon>
-            <mat-label>Price</mat-label>         
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="categoryId" apperance="fill" formControlName="categoryId">
-            <mat-icon matTextSuffix>category</mat-icon>
-            <mat-label>categoryId</mat-label>         
-        </mat-form-field><br>
-        <mat-form-field>
-            <input matInput placeholder="description" apperance="fill" formControlName="description">
-            <mat-icon matTextSuffix>description</mat-icon>
-            <mat-label>description</mat-label>         
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="rating" apperance="fill" formControlName="rating">
-            <mat-icon matTextSuffix>rating</mat-icon>
-            <mat-label>rating</mat-label>         
-        </mat-form-field><br>
-        <mat-form-field>
-            <input matInput placeholder="isAvailble" apperance="fill" formControlName="isAvailble">
-            <mat-icon matTextSuffix>isAvailble</mat-icon>
-            <mat-label>isAvailble</mat-label>         
-        </mat-form-field><br>
-        <button mat-raised-button color="warn" type="submit">Add</button>
+<div class="container">
+    <div class="col-md-3">
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-5521508-4610092.png">
+    </div>
+    <div class="formclass" >
+        <form [formGroup]="item" (ngSubmit)="submit()" class="p-3 text-bg-light">
+            <h1 style="color:black">Add Item</h1><br>
+            <mat-form-field class="md col-6">
+                <input matInput placeholder="Name" apperance="fill" formControlName="productName">
+                <mat-icon matTextSuffix>name</mat-icon>
+                <mat-label>ItemName</mat-label>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="ItemUrl" apperance="fill" formControlName="productImg">
+                <mat-icon matTextSuffix>url</mat-icon>
+                <mat-label>ItemUrl</mat-label>
+            </mat-form-field><br>
+            <mat-form-field>
+                <input matInput placeholder="Price" apperance="fill" formControlName="price">
+                <mat-icon matTextSuffix>price</mat-icon>
+                <mat-label>Price</mat-label>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="categoryId" apperance="fill" formControlName="categoryId">
+                <mat-icon matTextSuffix>category</mat-icon>
+                <mat-label>categoryId</mat-label>
+            </mat-form-field><br>
+            <mat-form-field>
+                <input matInput placeholder="description" apperance="fill" formControlName="description">
+                <mat-icon matTextSuffix>description</mat-icon>
+                <mat-label>description</mat-label>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="rating" apperance="fill" formControlName="rating">
+                <mat-icon matTextSuffix>rating</mat-icon>
+                <mat-label>rating</mat-label>
+            </mat-form-field><br>
+            <mat-form-field>
+                <input matInput placeholder="isAvailble" apperance="fill" formControlName="isAvailble">
+                <mat-icon matTextSuffix>isAvailble</mat-icon>
+                <mat-label>isAvailble</mat-label>
+            </mat-form-field><br>
+            <button mat-raised-button color="warn" type="submit">Add</button>
 
-    </form>
+        </form>
 
-</div>
+    </div>
 
 </div>

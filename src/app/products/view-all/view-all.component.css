@@ -1,0 +1,21 @@
+img{
+    height: 600px;
+}
+.example-card{
+    height: 350px;
+    width: 280px;
+    float: left;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid gray;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 10px;
+}
+.img{
+    height: 200px;
+    width: 240px;
+}
+button{
+  margin: 10px;
+  width: 180px;
+}
