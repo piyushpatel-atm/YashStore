@@ -1,16 +1,16 @@
-.formclass {
-    margin-top: 30px;
+/* form{
+    margin-top: 20px;
+    background-color: white;
+    margin-left: 350px;
+    height: 650px;
+    width: 800px;
+    border: 2px solid rgb(24, 23, 23);
     text-align: center;
-    margin-left: 300px;
-    padding-top: 20px;
-    height: 500px;
-    width:800px;
-    background-color: #d5cfcf;
-    color: rgba(146, 142, 137, 0.721);
-    box-shadow: 12px 12px 12px gray;
-     background-image: url("https://wallpapercave.com/wp/wp3028212.jpg")
-}
+    border-radius: 20px;
+    
+} */
 mat-form-field{
-    width: 300px;
-    padding-right: 20px;
+ height: 80px;
+ width: 300px;
+ margin: 20px;
 }

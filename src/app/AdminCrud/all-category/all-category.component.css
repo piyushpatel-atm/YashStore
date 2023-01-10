@@ -1,0 +1,35 @@
+/* .productFrame{
+    height: 230px;
+    width:220px;
+    box-shadow: 5px 5px 5px gray;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    margin: 10px;
+} */
+img{
+   height: 150px; 
+}
+.upernav{
+    background-color: rgb(147, 57, 233);
+    height: 60px;
+}
+
+.example-card{
+    height: 330px;
+    width: 250px;
+    float: left;
+    margin: 20px;
+    text-align: center;
+    border: 2px solid gray;
+    box-shadow: 8px 8px 8px gray;
+    border-radius: 20px;
+}
+.img{
+    height: 200px;
+    width: 240px;
+}
+button{
+  margin: 10px;
+  width: 180px;
+}

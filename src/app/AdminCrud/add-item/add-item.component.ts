@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ProductServiceService } from 'src/app/product-service.service';
+import { ProductService } from 'src/app/products/product.service';
 import { AdminDashboardComponent } from '../admin-dashboard/admin-dashboard.component';
 
 @Component({
@@ -11,32 +12,33 @@ import { AdminDashboardComponent } from '../admin-dashboard/admin-dashboard.comp
   styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit{
-  clickEventsubscription!: Subscription;
-  constructor(private cs:FormBuilder,public fb:ProductServiceService,public router:Router){
-    this.clickEventsubscription=this.fb.getClickEvent().subscribe((data)=>
-    {this.setdata()
-    this.open()}
-    )
-  }
+  constructor(private cs:FormBuilder,public fb:ProductServiceService,public router:Router,public service:ProductService){}
+  
   
   item!:FormGroup;
   list!:any[]
   ngOnInit(): void {
     this.item=this.cs.group({
       price:['',Validators.required],
-      itemUrl:['',Validators.required],
-      name:['',Validators.required]
+      productImg:['',Validators.required],
+      productName:['',Validators.required],
+      categoryId:[''],
+      description:[''],
+      rating:[''],
+      isAvailble:['']
     })
    
   }
   submit(){
     if(this.item.valid)
     {
-    this.fb.setItemValue(this.item.value).subscribe();
+    // this.fb.setItemValue(this.item.value).subscribe();
+    this.service.createProduct(this.item.value).subscribe();
     window.alert("Add succesfully");
-    this.router.navigate(['adminDashboard']);
+    this.router.navigate(['category'])
    }else{
     window.alert("invalid data")
+    window.location.reload();
    }
   }
   setdata(){

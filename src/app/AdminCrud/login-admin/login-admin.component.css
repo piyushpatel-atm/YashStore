@@ -1,0 +1,14 @@
+.formclass{
+    margin-top: 100px;
+    margin-left: 500px;
+    height: 400px;
+    width: 400px;
+    border: 2px solid rgb(24, 23, 23);
+    text-align: center;
+    box-shadow: -10px 10px 10px gray;
+    background-color: rgb(24, 23, 23)
+}
+mat-form-field{
+ height: 80px;
+ width: 300px;
+}

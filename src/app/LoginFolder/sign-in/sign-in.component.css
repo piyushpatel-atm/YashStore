@@ -1,3 +1,9 @@
 .displayTable{
-    background-color: gray;
+    background-image: url("https://img.freepik.com/free-photo/cyber-monday-shopping-sales_23-2148688502.jpg?w=2000");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.authBlock{
+    background-color: rgba(0,4,6,0.2);
+    box-shadow: 12px 12px 12px rgba(107, 104, 104);
 }
