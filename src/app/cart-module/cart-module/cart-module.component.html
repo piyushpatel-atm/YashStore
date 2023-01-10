@@ -1,105 +1,80 @@
-<!-- <section class="py-5">
-    <div class="container px-4 px-lg-5 my-5">
-        <div class="row gx-4 gx-lg-5 align-items-center" *ngFor="let products of cartList" >
-            <div class="col-md-5"><img class="card-img-top mb-2 mb-md-0" src="{{products.productImg}}" alt="..." /></div>
-
-            <div class="col-md-5" >
-                <div class="small mb-1">SKU: BST-498</div>
-                <h1 class="display-5 fw-bolder">{{products.productName}}</h1>
-                <div class="fs-5 mb-5">
-                    
-                    <span>{{products.price}}</span>
-                </div>
-                <p class="lead">{{products.description}}</p>
-
-                
-
-                <div class="d-flex">
-                    <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                    <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                        <i class="bi-cart-fill me-1"></i>
-                        Add to cart
-                    </button>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section> -->
 <ng-container *ngIf="lock">
-<div class="container">
-    <div class="card">
-        <h5 class="card-title" style="font-size: 40px;">My Cart</h5>
-
-    </div>
-    <div class="center">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-5521508-4610092.png" alt="">
-        <h3>Your cart is empty!</h3>
-        <h4>Add item to it now1</h4>
-        <button class="btn btn-primary" routerLink="/products">ShopNow</button>
-    </div>
-</div>
-</ng-container>
-<ng-container *ngIf="tableLock">
     <div class="container">
-        <div class="card-table">
-            <div class="cart-product">
-                <table class="table table-responsive" >
-                    <thead>
-                        <tr>
-                            <th>Product Name</th>
-                            <th>Product Image</th>
-                            <th>Description</th>
-                            <th>Category</th>
-                            <th>Rating</th>
-                            <th>Price</th>
-                            <th>Active</th>
-                            <th>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let i of cartList">
-                            <td>{{i.productName}}</td>
-                            <td><img src="{{i.productImg}}"></td>
-                            <td>{{i.description}}</td>
-                            <td>{{i.categoryId}}</td>
-                            <td>{{i.rating}}</td>
-                            <td>{{i.price}}</td>
-                            <td>{{i.isAvailble}}</td>
-                            <td>
-                                <button class="byn btn-danger"><mat-icon color="warn" (click)="remove(i)">delete</mat-icon></button>
-                            </td>
-                        </tr>
-                    </tbody>
-    
-                </table>
-            </div>
+        <div class="card">
+            <h5 class="card-title" style="font-size: 40px;">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-5521508-4610092.png" alt="">
+            <h3>Your cart is empty!</h3>
+            <h4>Add item to it now1</h4>
+            <button class="btn btn-primary" routerLink="/products">ShopNow</button>
         </div>
     </div>
-</ng-container><br><br>
-<ng-container  *ngIf="!lock">
-    <div class="container outerdiv">
-        <h1>Billing</h1>
-        <table class="table" style="text-align: left;">
-            <thead>
-              <tr>
-                <th scope="col">Product Name</th>
-                <th scope="col">Product Price</th>
-              </tr>
-            </thead>
-            <tbody *ngFor="let products of cartList">
-              <tr>
-                <th scope="row">{{products.productName}}</th>
-                <td>{{products.price}}</td>
-              </tr>
-            </tbody><br>
-            <tr><b>Total Price</b>
-                <td>{{totalPrice}}</td>
-            </tr>
-            
-          </table>
-          <button class="btn btn-primary" routerLink="/products" style="margin-bottom: 50px;">ShopMore</button>
-          <button class="btn btn-danger" style="margin-left: 300px;margin-bottom: 50px;">Order Now</button>
+</ng-container>
+<!--madhvi code -->
+<ng-container *ngIf="!lock">
+    <div class="row no-gutters">
+        <div class="col-sm-6 details">
+            <div class="card" style="width: 600px; height: 300px " *ngFor="let i of cartList">
+                <div class="row no-gutters">
+                    <div class="col-sm-5">
+                        <img class="card-img" src="{{i.productImg}}" class="rounded-end" alt=" image not loaded!">
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="card-body">
+                            <h5 class="card-title">{{i.productName}}</h5>
+                            <p class="card-text">{{i.description}}</p>
+                            <button class="btn btn-secondary" style="margin-right: 20px;"> Quantity :
+                                {{i.quantity}}</button>
+                            <button class="btn btn-info"> Price : Rs.{{i.price}}</button><br><br>
+                            <div class="inc-dec-button">
+                                <button class="btn btn-light" (click)="inc(i)"><mat-icon>add</mat-icon></button>
+                                <!-- <button mat-raised-button color="accent" (click)="inc(item)"><mat-icon>add</mat-icon></button> -->
+                                <span class="span"> {{i.quantity}} </span>
+                                <button class="btn btn-light btn-sm" (click)="dec(i)"
+                                    style="margin-right: 50px;"><mat-icon>remove</mat-icon></button>
+                                <button (click)="remove(i)" class="btn btn-light btn-sm"><mat-icon
+                                        color="warn">delete</mat-icon></button>
+                            </div>
+                            <span class="span">Category ID : {{i.categoryId}} </span>
+                            <span class="span"><mat-icon>rating</mat-icon>Rating : {{i.rating}} </span>
+                            <div>
+                            </div>
+                            <!-- <a href="#" class="btn btn-primary">View Profile</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <div class="col-sm-5 orderDetails">
+            <h1>Order Details</h1>
+            <table class="table" style="text-align: left;">
+                <thead>
+                    <tr>
+                        <th scope="col">Product Name</th>
+                        <th scope="col">Product Price</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let products of cartList">
+                    <tr>
+                        <th scope="row">{{products.productName}}</th>
+                        <td>{{products.price}}</td>
+                    </tr>
+                </tbody><br>
+                <tbody>
+                    <tr>
+                        <th scope="row">Delivery Charge</th>
+                        <td><i class="text-decoration-line-through">99</i>FREE</td>
+                    </tr>
+                </tbody>
+                <tr><b>Total Price</b>
+                    <td>{{totalPrice}}</td>
+                </tr>
+            </table>
+            <button class="btn btn-primary" routerLink="/products" style="margin-bottom: 20px;">ShopMore</button>
+            <button class="btn btn-danger" style="margin-left: 50px;margin-bottom: 20px;" routerLink="/Checkout">Order
+                Now</button>
+        </div>
     </div>
 </ng-container>
-

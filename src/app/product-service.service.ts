@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { Product } from './products/product';
+import { cartProduct, Product } from './products/product';
 import { itemmodule } from './shared/data-type';
 
 @Injectable({
@@ -29,13 +29,17 @@ export class ProductServiceService {
   }
 
   getCartData(){
-    return this.http.get<Product[]>(this.url+ "/cartData");
+    return this.http.get<cartProduct[]>(this.url+ "/cartData");
   }
   setCartData(data:any){
-    return this.http.post<Product>(this.url + "/cartData", data);
+    console.log(data);
+    return this.http.post<any>(this.url + "/cartData", data);
   }
   removeCartData(id:any){
     return this.http.delete(this.url + "/cartData/" + id);
+  }
+  updateCart(id:number,data:any){
+    return this.http.put<any>(this.url+"/cartData/"+id,data)
   }
 
 

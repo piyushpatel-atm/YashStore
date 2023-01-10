@@ -36,6 +36,8 @@ import { UpdateItemComponent } from './AdminCrud/update-item/update-item.compone
 import { CartModuleComponent } from './cart-module/cart-module/cart-module.component';
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CheckoutComponent } from './BillingModule/checkout/checkout.component';
+
 
 @NgModule({
   declarations: [
@@ -56,6 +58,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
      AllCategoryComponent,
      UpdateItemComponent,
      CartModuleComponent,
+     CheckoutComponent,
     
 
   ],
