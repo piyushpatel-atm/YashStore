@@ -20,13 +20,14 @@ import { CartModuleComponent } from './cart-module/cart-module/cart-module.compo
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
+  { path: '', redirectTo: '/products', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
-  { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) ,canActivate:[AuthGuard]},
+  //{ path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) ,canActivate:[AuthGuard]},
+  { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
   {path:'order', component:ListOrderComponent},
   {path:"dashboard",component:DashboardComponent},
   {path:"adminDashboard",component:AdminDashboardComponent},

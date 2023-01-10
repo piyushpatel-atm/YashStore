@@ -181,5 +181,28 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "User": [
+    {
+      "id": 1,
+      "name": "Divya Vyas",
+      "email": "divyavyas1205@gmail.com",
+      "password": "123456789",
+      "mob": "9876543210"
+    },
+    {
+      "name": "akshat jain",
+      "email": "akshatkumarjain27@gmail.com",
+      "password": "",
+      "mob": "",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Test User",
+      "email": "testuser@gmail.com",
+      "password": "123456789",
+      "mob": "9876543210"
+    }
+  ]
 }
