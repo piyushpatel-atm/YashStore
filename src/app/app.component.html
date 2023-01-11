@@ -1,21 +1,78 @@
-<!-- <<app-navbarcomp></app-navbarcomp>
 
-<mat-sidenav-container fullscreen>
+<mat-sidenav-container >
+    
+    
+    <mat-sidenav #sidenav fullscreen>
+    
+      
+  
+    </mat-sidenav>
+  
+    
 
-    <mat-toolbar color="primary">
-        <a mat-button><mat-icon matSuffix>home</mat-icon>
+    <mat-toolbar class="text-bg-dark" >
+
+        <a style="font-size: 40px;">
+            <img src="https://www.yash.com/wp-content/themes/html5blank-stable/images/yash-logo-new.svg">&nbsp;
+        </a>
+        <strong style="font-size: 30px;"><i>Yash Store</i></strong>&nbsp;
+        <a mat-button [matMenuTriggerFor]="dropdown">
+      
+            Categories
+  
+        </a>
+        <mat-menu #dropdown  >
+      
+      
+            <div class="list-group" *ngFor="let catg of categoryList">
+                <a routerLink="/products/view-product-by-category/{{catg.id}}" class="list-group-item">{{catg.categoryName}}</a>
+            </div>
+            <router-outlet></router-outlet>
+        </mat-menu>
+  
+        <a mat-button routerLink="products"><mat-icon matSuffix>home</mat-icon>
             <mat-label>Home</mat-label>
         </a>
-        <a mat-button routerLink="sign-in"><mat-icon matSuffix>person</mat-icon>
+        <a *ngIf="!authService.isLoggedIn && !authService.isAdminLogin.value" mat-button routerLink="sign-in"><mat-icon matSuffix>person</mat-icon>
             <mat-label>Login</mat-label>
         </a>
-        <a mat-button><mat-icon matSuffix>add</mat-icon>
+        <a *ngIf="authService.isLoggedIn && !authService.isAdminLogin.value" mat-button routerLink="/cartItem"><mat-icon matSuffix>shopping_cart</mat-icon>
+            <mat-label> {{userName | titlecase}}</mat-label>
+        </a>
+        <a *ngIf="authService.isLoggedIn || authService.isAdminLogin.value" mat-button (click)="authService.SignOut()"><mat-icon matSuffix>logout</mat-icon>
+            <mat-label>Logout</mat-label>
+        </a>
+        <!-- <a mat-button><mat-icon matSuffix>add</mat-icon>
             <mat-label>Register</mat-label>
         </a>
-
-
-    </mat-toolbar>
+    -->
+     
+        <!-- <a  mat-button [matMenuTriggerFor]="adminDropdown"><mat-icon matSuffix>person</mat-icon>
+            <mat-label>Admin </mat-label>
+        </a> 
+        <mat-menu #adminDropdown  >
+      
+      
+            <div class="list-group"> -->
+                <a *ngIf="authService.isAdminLogin.value" routerLink="/additem" mat-button class="list-group-item">Add Item</a>
+            <!-- </div> -->
+            <!-- <div class="list-group"> -->
+                <a *ngIf="authService.isAdminLogin.value" routerLink="category" mat-button class="list-group-item">List All</a>
+            <!-- </div>
+            <router-outlet></router-outlet>
+        </mat-menu> -->
     
+    </mat-toolbar>
+  
     <router-outlet></router-outlet>
-</mat-sidenav-container> -->
-<router-outlet></router-outlet>
+</mat-sidenav-container> 
+
+<!-- <app-header></app-header>
+
+<main  >
+    <router-outlet></router-outlet>
+</main>-->
+<!-- <app-footer></app-footer> -->
+
+
+

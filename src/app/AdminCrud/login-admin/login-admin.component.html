@@ -1,0 +1,25 @@
+<div class="formclass">
+    <h1>Admin Login</h1>
+    <form [formGroup]="loginFormGroup" (ngSubmit)="submit()">
+
+        <mat-form-field>
+            <input matInput placeholder="loginName" apperance="fill" formControlName="loginName">
+            <mat-icon matTextSuffix>login</mat-icon>
+            <mat-label>LoginName</mat-label>
+        </mat-form-field>&nbsp;&nbsp;
+        <mat-form-field>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+            <mat-label>Password</mat-label>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="this.loginFormGroup.controls['password'].hasError('required')">required</mat-error>
+        </mat-form-field><br>
+        <button mat-raised-button color="warn" type="submit">submit</button>
+    </form>
+    
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="primary" mat-dialog-close>close</button>
+</div>

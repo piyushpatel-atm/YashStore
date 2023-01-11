@@ -1,0 +1,336 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "productName": "Think And Grow Rick",
+      "categoryId": 5,
+      "description": " Think And Grow Rich is a curation of the 13 most common habits of wealthy and successful people, distilled from studying over 500 individuals over the course of 20 years.",
+      "price": 200,
+      "isAvailble": true,
+      "productImg": "https://www.oberlo.com/media/1603897583-image16-1.jpg?w=1824&fit=max",
+      "rating": 3
+    },
+    {
+      "id": 2,
+      "productName": "The Book Thief",
+      "categoryId": 5,
+      "description": "The Book Thief tells the story of Liesel, a little girl who is taken to a new home because her mother can't afford to take care of her. ",
+      "price": 300,
+      "isAvailble": true,
+      "productImg": "https://celadonbooks.com/wp-content/uploads/2019/02/the-book-thief.jpg",
+      "rating": 4
+    },
+    {
+      "id": 3,
+      "productName": "Diary Of a Wimpy Kid",
+      "categoryId": 5,
+      "description": " Greg is an extremely relatable protagonist attending middle school and dealing with bullies, hormones, puberty, and social dynamics. ",
+      "price": 400,
+      "isAvailble": true,
+      "productImg": "https://www.teachthought.com/storage/2021/12/91YchjGUxZL._AC_UY327_FMwebp_QL65_.webp",
+      "rating": 2
+    },
+    {
+      "id": 4,
+      "productName": "13 Reasons Why",
+      "categoryId": 5,
+      "description": "After his friend Hannah Baker takes her own life, Clay Jensen is surprised to discover a package with thirteen cassette tapes on his porch. ",
+      "price": 500,
+      "isAvailble": true,
+      "productImg": "https://www.teachthought.com/storage/2021/12/51rCn7hqisL._AC_UY327_FMwebp_QL65_.webp",
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "productName": "The fault in our stars",
+      "categoryId": 5,
+      "description": "This one’s not your average love story! Hazel feels defined by her cancer diagnosis. When she meets Augustus Waters in a Cancer Kid Support Group, her outlook on life and her own future change rapidly. ",
+      "price": 299,
+      "isAvailble": true,
+      "productImg": "https://www.teachthought.com/storage/2021/12/81a4kCNuHL._AC_UY327_FMwebp_QL65_.webp",
+      "rating": 5
+    },
+    {
+      "id": 6,
+      "productName": "Tricycle",
+      "categoryId": 4,
+      "description": "The removable accessories allow this tricycle to grow with your child. Seat is spacious with a back rest for kids to make seating and posture comfortable .",
+      "price": 299,
+      "isAvailble": true,
+      "productImg": "https://cdn.fcglcdn.com/brainbees/images/products/438x531/11525180a.webp",
+      "rating": 5
+    },
+    {
+      "id": 7,
+      "productName": "remote control  car",
+      "categoryId": 4,
+      "description": "kids toys 2.4G 1:18 series remote control racing car speed with light",
+      "price": 799,
+      "isAvailble": true,
+      "productImg": "https://shopelse.in/wp-content/uploads/2022/08/H6fb419c077af4545b7bc67975fda55d6z.jpg",
+      "rating": 5
+    },
+    {
+      "id": 8,
+      "productName": "Garden Toy cart Kids",
+      "categoryId": 4,
+      "description": "latest radhe Garden Toy cart Kids Gardening Tools | Educational Toys Children | 23' Tall Wheeled cart Trolley | Pretend Play Toys Kids",
+      "price": 299,
+      "isAvailble": true,
+      "productImg": "https://rukminim1.flixcart.com/image/832/832/kfh5ifk0/role-play-toy/3/y/c/garden-toy-cart-kids-gardening-tools-educational-toys-children-original-imafvx9y6fq3nyfe.jpeg?q=70",
+      "rating": 4
+    },
+    {
+      "id": 9,
+      "productName": "Mirada",
+      "categoryId": 4,
+      "description": "Set content: 1 Soft toy,Type: Hoodie Penguin ,Material: Polyester,Filling: Polyester ,Size: Medium,Operation mode: Manual,Colour: Grey",
+      "price": 599,
+      "isAvailble": true,
+      "productImg": "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/20475986/2022/10/20/f3a4530f-204a-4c67-b504-a763f0f92eff1666276624609DearJoyKidsGreyBrownElephantMonkeySoftToy1.jpg",
+      "rating": 5
+    },
+    {
+      "id": 10,
+      "productName": "Unicorn",
+      "categoryId": 4,
+      "description": " unicorn stuffed toy covered by high quality plush fabric with soft pp cotton inserts, which has excellent performance on elasticity and bulkiness.",
+      "price": 1099,
+      "isAvailble": true,
+      "productImg": "https://rukminim1.flixcart.com/image/832/832/ku04o7k0/stuffed-toy/x/m/9/unicorn-red-25-cm-soft-toy-baby-toys-kids-toy-toy-for-girl-original-imag7867zsjzngbb.jpeg?q=70",
+      "rating": 5
+    },
+    {
+      "id": 11,
+      "productName": "13-Piece Cookware Set",
+      "categoryId": 3,
+      "description": " Triple-bonded, hard-anodized aluminum with stainless steel disc bottom Riveted stainless steel handles and lid handles Suitable for all stovetops, including induction Dishwasher- and oven-safe to 500 degrees",
+      "price": 899,
+      "isAvailble": true,
+      "productImg": "https://clothesmania.in/wp-content/uploads/2022/04/all-clad-hard-anodized-13-piece-cookware-set-768x768.jpg",
+      "rating": 5
+    },
+    {
+      "id": 12,
+      "productName": "Citrus Juicer",
+      "categoryId": 3,
+      "description": " Juicer Stainless Steel Manual Citrus Juicer Industrial Fruit Press Professional Juice Extractor Heavy Duty Citrus Press Orange Crusher,Material Stainless steel",
+      "price": 1299,
+      "isAvailble": true,
+      "productImg": "https://clothesmania.in/wp-content/uploads/2022/04/71af8P-GnWL._AC_SL1500-768x768.jpg",
+      "rating": 5
+    },
+    {
+      "id": 13,
+      "productName": "Dry Bucket  Clean Mop",
+      "categoryId": 3,
+      "description": " Plastic Magic Spin Mop-Bucket Dry Mop-G24.Mop Set, Broom, Mop, Cleaning Wipe, Bucket, Duster, Dustpan, Kitchen Wiper, Mop Refill",
+      "price": 1500,
+      "isAvailble": true,
+      "productImg": "https://clothesmania.in/wp-content/uploads/2022/04/56d25593ba364028dabbbd4129cfde2d.jpg",
+      "rating": 5
+    },
+    {
+      "id": 14,
+      "productName": " Basket Shelves",
+      "categoryId": 3,
+      "description": " HIGH QUALITY MATERIAL:The metal trays are anti-corrosion, waterproof and scratch-resistant while the thick metal steel frame makes it sturdy enough.It’s a great Kitchen storage organizer",
+      "price": 899,
+      "isAvailble": true,
+      "productImg": "https://clothesmania.in/wp-content/uploads/2022/04/5-1-768x673.jpg",
+      "rating": 5
+    },
+    {
+      "id": 15,
+      "productName": "Potato Chips Cutter ",
+      "categoryId": 3,
+      "description": " Triple-bonded, hard-anodized aluminum with stainless steel disc bottom Riveted stainless steel handles and lid handles Suitable for all stovetops, including induction Dishwasher- and oven-safe to 500 degrees",
+      "price": 249,
+      "isAvailble": true,
+      "productImg": "https://clothesmania.in/wp-content/uploads/2022/04/Stainless-Steel-Home-French-Fries-SDL404518570-4-7e009-768x899.jpg",
+      "rating": 5
+    },
+    {
+      "id": 16,
+      "productName": " Printed Kurta Set",
+      "categoryId": 2,
+      "description": " Fabric : Cotton, 100% Original Products,Free Delivery on order on delivery available Easy 15 days returns and exchanges",
+      "price": 1300,
+      "isAvailble": true,
+      "productImg": "https://clothesmania.in/wp-content/uploads/2021/12/KURTASET.SK_.7.1_a7ef1bda-1afd-45ba-8489-0ead273f285a-768x1024.jpg",
+      "rating": 5
+    }
+  ],
+  "cartData": [
+    {
+      "categoryId": 2,
+      "description": "boAt Airdopes 201 | TWS Wireless Earbuds with 10mm Drivers, 470mAh charging case, Up to 3 hours of audio bliss",
+      "quantity": 3,
+      "email": "piyush29041999@gmail.com",
+      "price": 1989,
+      "productImg": "https://img.freepik.com/free-photo/one-white-sneaker-shoe-isolated-white_93675-134695.jpg?w=2000",
+      "productName": "boAt Airdopes 201 ",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 1
+    },
+    {
+      "categoryId": 1,
+      "description": "boAt Airdopes 201 | TWS Wireless Earbuds with 10mm Drivers, 470mAh charging case, Up to 3 hours of audio bliss",
+      "quantity": 1,
+      "email": "piyush29041999@gmail.com",
+      "price": 1999,
+      "productImg": "http://cdn.shopify.com/s/files/1/0057/8938/4802/products/14f33054-fb1f-4e9c-aa1b-08ff38646fd0.png?v=1625046508",
+      "productName": "boAt Airdopes 201 ",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 2
+    },
+    {
+      "categoryId": 5,
+      "description": " Think And Grow Rich is a curation of the 13 most common habits of wealthy and successful people, distilled from studying over 500 individuals over the course of 20 years.",
+      "quantity": 1,
+      "email": "divyavyas1205@gmail.com",
+      "price": 200,
+      "productImg": "https://www.oberlo.com/media/1603897583-image16-1.jpg?w=1824&fit=max",
+      "productName": "Think And Grow Rick",
+      "isAvailble": true,
+      "rating": 3,
+      "id": 3
+    },
+    {
+      "categoryId": 5,
+      "description": "The Book Thief tells the story of Liesel, a little girl who is taken to a new home because her mother can't afford to take care of her. ",
+      "quantity": 1,
+      "email": "divyavyas1205@gmail.com",
+      "price": 300,
+      "productImg": "https://celadonbooks.com/wp-content/uploads/2019/02/the-book-thief.jpg",
+      "productName": "The Book Thief",
+      "isAvailble": true,
+      "rating": 4,
+      "id": 4
+    },
+    {
+      "categoryId": 5,
+      "description": "After his friend Hannah Baker takes her own life, Clay Jensen is surprised to discover a package with thirteen cassette tapes on his porch. ",
+      "quantity": 1,
+      "email": "divyavyas1205@gmail.com",
+      "price": 500,
+      "productImg": "https://www.teachthought.com/storage/2021/12/51rCn7hqisL._AC_UY327_FMwebp_QL65_.webp",
+      "productName": "13 Reasons Why",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 5
+    },
+    {
+      "categoryId": 5,
+      "description": "The Book Thief tells the story of Liesel, a little girl who is taken to a new home because her mother can't afford to take care of her. ",
+      "quantity": 1,
+      "email": "divyavyas1205@gmail.com",
+      "price": 300,
+      "productImg": "https://celadonbooks.com/wp-content/uploads/2019/02/the-book-thief.jpg",
+      "productName": "The Book Thief",
+      "isAvailble": true,
+      "rating": 4,
+      "id": 6
+    },
+    {
+      "categoryId": 4,
+      "description": "kids toys 2.4G 1:18 series remote control racing car speed with light",
+      "quantity": 1,
+      "email": "divyavyas1205@gmail.com",
+      "price": 799,
+      "productImg": "https://shopelse.in/wp-content/uploads/2022/08/H6fb419c077af4545b7bc67975fda55d6z.jpg",
+      "productName": "remote control  car",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 7
+    },
+    {
+      "categoryId": 4,
+      "description": " unicorn stuffed toy covered by high quality plush fabric with soft pp cotton inserts, which has excellent performance on elasticity and bulkiness.",
+      "quantity": 1,
+      "email": "divyavyas1205@gmail.com",
+      "price": 1099,
+      "productImg": "https://rukminim1.flixcart.com/image/832/832/ku04o7k0/stuffed-toy/x/m/9/unicorn-red-25-cm-soft-toy-baby-toys-kids-toy-toy-for-girl-original-imag7867zsjzngbb.jpeg?q=70",
+      "productName": "Unicorn",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 8
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "categoryName": "Electronics"
+    },
+    {
+      "id": 2,
+      "categoryName": "Fashion"
+    },
+    {
+      "id": 3,
+      "categoryName": "Home & Kitchen"
+    },
+    {
+      "id": 4,
+      "categoryName": "Children & Toys"
+    },
+    {
+      "id": 5,
+      "categoryName": "Books"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "User": [
+    {
+      "id": 1,
+      "name": "Divya Vyas",
+      "email": "divyavyas1205@gmail.com",
+      "password": "123456789",
+      "mob": "9876543210"
+    },
+    {
+      "name": "akshat jain",
+      "email": "akshatkumarjain27@gmail.com",
+      "password": "",
+      "mob": "",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Test User",
+      "email": "testuser@gmail.com",
+      "password": "123456789",
+      "mob": "9876543210"
+    },
+    {
+      "email": "piyush29041999@gmail.com",
+      "password": "",
+      "mob": "",
+      "id": 4
+    },
+    {
+      "email": "utsavibhoge14@gmail.com",
+      "password": "",
+      "mob": "",
+      "id": 5
+    }
+  ]
+}

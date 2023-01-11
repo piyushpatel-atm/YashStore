@@ -1,3 +1,4 @@
+
 .listproduct{
     height: 200px;
     width:200px;
@@ -11,4 +12,14 @@
 button{
     margin-top:165px;
     margin-right: 25px;
+}
+
+
+
+main{
+ margin-bottom: 300px;
+}
+img{
+    height: 50px;
+    width: 50px;
 }

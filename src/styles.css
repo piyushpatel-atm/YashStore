@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+You can add global styles to this file, and also import other style files
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -105,7 +105,7 @@ label {
 
 .formGroup {
   margin-bottom: 20px;
-  float: left;
+  float: center;
   width: 100%;
 }
 
@@ -230,12 +230,12 @@ input:-moz-placeholder {
   font-size: 14px;
   font-weight: 400;
   display: block;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgb(7, 7, 7);
 }
 
 .redirectToLogin .redirect {
   cursor: pointer;
-  color: #ffffff;
+  color: #0c0c0c;
   text-decoration: underline;
 }
 
@@ -666,3 +666,6 @@ body .table thead th {
     display: none;
   }
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,111 @@
+<ng-container *ngIf="lock">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title" style="font-size: 40px;">My Cart</h5>
+        </div>
+        <div class="center">
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-5521508-4610092.png" alt="">
+            <h3>Your cart is empty!</h3>
+            <h4>Add item to it now1</h4>
+            <button class="btn btn-primary" routerLink="/products">ShopNow</button>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="!lock">
+
+    <div class="row no-gutters">
+
+        <div class="col-sm-8 details">
+        
+                <div class="card" style="width: 600px; height: 300px " *ngFor="let i of cartList">
+                    <div class="row no-gutters">
+                        <div class="col-sm-5">
+                            <img class="card-img" src="{{i.productImg}}" class="rounded-end" alt=" image not loaded!">
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-body">
+                                <h5 class="card-title">{{i.productName}}</h5>
+                                <p class="card-text">{{i.description}}</p>
+
+                                <button class="btn btn-secondary" style="margin-right: 20px;"  > Quantity : {{i.quantity}}</button>
+                                <button class="btn btn-info" > Price : Rs.{{i.price}}</button><br><br>
+
+                                <div class="inc-dec-button">
+
+                                    <button  class="btn btn-light" (click)="inc(i)"><mat-icon>add</mat-icon></button>
+                                    <!-- <button mat-raised-button color="accent" (click)="inc(item)"><mat-icon>add</mat-icon></button> -->
+                                    <span class="span"> {{i.quantity}} </span>
+                                    <button class="btn btn-light btn-sm" (click)="dec(i)" style="margin-right: 50px;"><mat-icon>remove</mat-icon></button>
+                                    <button (click)="remove(i)" class="btn btn-light btn-sm" ><mat-icon color="warn">delete</mat-icon></button>
+                                    
+                                </div>
+
+                                <span class="span">Category ID : {{i.categoryId}} </span>
+                                <span class="span">  <mat-icon>
+                                    {{showIcon(i)}}
+                                  </mat-icon>{{i.rating}} </span>
+
+                                <div>
+
+                                </div>
+                                <!-- <a href="#" class="btn btn-primary">View Profile</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+           
+           
+        </div>
+
+        <br><br><br><br><br><br><br><br>
+
+        
+        <div class="col-sm-4 orderDetails"  >
+            <div class="input-group my-4">
+
+                <input type="text" class="form-control" name="" placeholder="Promo code">
+
+                <button class="btn btn-light text-primary" (click)="apply()">Apply</button>
+
+            </div>
+            <h1>Order Details</h1>
+            <table class="table" style="text-align: left;">
+                <thead>
+                  <tr>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Price</th>
+                  </tr>
+                </thead>
+
+                <tbody *ngFor="let products of cartList">
+                  <tr>
+                    <th scope="row">{{products.productName}}</th>
+                    <td>{{products.price}}</td>
+                  </tr>
+                </tbody><br>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Delivery Charge</th>
+                       <td class="text-decoration-line-through" >99 </td><i>FREE</i>
+                    </tr>
+                </tbody>
+                <br>
+                <tr >
+                
+                    <b>Total Price</b>
+                    <td><b>Rs.{{totalPrice}}</b></td>
+                </tr>
+                
+              </table>
+              <br><br>
+              <button class="btn btn-primary" routerLink="/products" style="margin-bottom: 20px; margin-left:40px;">ShopMore</button>
+              <!-- <button (click)="emptycart()" class="btn btn-danger" style="margin-right: 30px;">Empty cart</button> -->
+              <button class="btn btn-danger" style="margin-left: 50px;margin-bottom: 20px;" routerLink="/Checkout">Order Now</button>
+        </div>
+       
+    </div>
+
+</ng-container>
+

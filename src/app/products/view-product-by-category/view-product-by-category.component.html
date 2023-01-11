@@ -1,0 +1,18 @@
+
+
+
+ <section class="py-5">
+   
+ <section class="container">
+    <div *ngFor="let products of productList"  class="Cartdiv">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{products.productImg}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><b>{{products.productName}}</b></h5>
+          <p class="card-text">{{products.description}}</p>
+          <a href="#" class="btn btn-danger"(click)="addCart(products)">Add To Card</a>
+          <a href="#" class="btn btn-danger" style="margin-left: 20px;" routerLink="/products/view-product/{{products.id}}">view Details</a>
+        </div>
+      </div>
+    </div>
+</section> 
