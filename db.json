@@ -166,128 +166,68 @@
       "isAvailble": true,
       "productImg": "https://clothesmania.in/wp-content/uploads/2021/12/KURTASET.SK_.7.1_a7ef1bda-1afd-45ba-8489-0ead273f285a-768x1024.jpg",
       "rating": 5
-    },
-    {
-      "id": 17,
-      "productName": "Peach Blossom Juttis",
-      "categoryId": 2,
-      "description": " Material: Faux/ Vegan Leather Color: Gold Shoe Type: Slider Heel Type: Flat Heel Height: 10mm Occasion: Casual/ Semi formal Shoe Sole: TPR/ Soft Cushioned",
-      "price": 1200,
-      "isAvailble": true,
-      "productImg": "https://clothesmania.in/wp-content/uploads/2021/12/067C9B73-9F92-49C4-8A02-5467F18AFE21-768x1024.jpg",
-      "rating": 5
-    },
-    {
-      "id": 18,
-      "productName": "Vegan Leather Bag",
-      "categoryId": 2,
-      "description": " Made of durable Vegan Leather with an HD print quality Adjustable  Leather shoulder strap Carefully handcrafted Inner Polyester lining Genuine YKK zip closure",
-      "price": 700,
-      "isAvailble": true,
-      "productImg": "https://clothesmania.in/wp-content/uploads/2022/04/handbag.jpg",
-      "rating": 4
-    },
-    {
-      "id": 19,
-      "productName": "Floral Cotton Saree",
-      "categoryId": 2,
-      "description": "  features maroon & white batik crushed effect with floral pattern on pallu & borders and cotton thread tassels on pallu edges. Each saree is Handcrafted in Jaipur for you with love",
-      "price": 900,
-      "isAvailble": true,
-      "productImg": "https://clothesmania.in/wp-content/uploads/2021/12/DSC_9297_1200x1800-768x1152.jpg",
-      "rating": 4
-    },
-    {
-      "id": 20,
-      "productName": " Blue Printed Kurta Set",
-      "categoryId": 2,
-      "description": "  Fabric : Cotton,100% Original Products,Free Delivery on order on delivery available Easy 15 days returns and exchange",
-      "price": 900,
-      "isAvailble": true,
-      "productImg": "https://clothesmania.in/wp-content/uploads/2021/12/KURTASET.SK_.5.1_37edb6ec-a7a5-4e57-885b-8a3c4a4385f0-768x1024.jpg",
-      "rating": 4
-    },
-    {
-      "id": 21,
-      "productName": "CANDY  Direct Cool  ",
-      "categoryId": 1,
-      "description": "  You can keep your food items fresh for long durations with the Candy 170 L Direct Cool Single-door Refrigerator. ",
-      "price": 10700,
-      "isAvailble": true,
-      "productImg": "https://rukminim1.flixcart.com/image/832/832/xif0q/refrigerator-new/p/r/c/cdsd522170cr-1035-2-2022-33-candy-620-531-original-imaghprtgepxqfrk.jpeg?q=70",
-      "rating": 4
-    },
-    {
-      "id": 22,
-      "productName": "IFB  Automatic Top Load ",
-      "categoryId": 1,
-      "description": "   1 Unit Washing Machine, Outlet Drain Pipe, User Manual,Fully Automatic Top Load,",
-      "price": 32300,
-      "isAvailble": true,
-      "productImg": "https://rukminim1.flixcart.com/image/832/832/xif0q/washing-machine-new/u/h/p/-original-imagkd23ba7fdzfs.jpeg?q=70",
-      "rating": 5
-    },
-    {
-      "id": 23,
-      "productName": "V-Guard Zenora  ",
-      "categoryId": 1,
-      "description": "   1 Unit Washing Machine, Outlet Drain Pipe, User Manual,Fully Automatic Top Load,",
-      "price": 8499,
-      "isAvailble": true,
-      "productImg": "https://rukminim1.flixcart.com/image/832/832/kffq2kw0/water-purifier/4/4/r/v-guard-zenora-ro-uf-mb-original-imafvvz79fzf6kyg.jpeg?q=70",
-      "rating": 5
-    },
-    {
-      "id": 24,
-      "productName": "Godrej 5 in 1 Cooling  ",
-      "categoryId": 1,
-      "description": "   1 Unit Washing Machine, Outlet Drain Pipe, User Manual,Fully Automatic Top Load,",
-      "price": 8499,
-      "isAvailble": true,
-      "productImg": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQbPjjU5kzrCqUadxJDvTE8ZCb2G4R-JPf1IHZV-AqjqiVfgaQvbwYR_o8zoIVai9kHfklO-lpIGPWWWvdxCR0CwQRNi8X02qjUAGuY_xOnJ0ZTdxqezMq-7w",
-      "rating": 5
-    },
-    {
-      "id": 25,
-      "productName": "Thomson Deluxe Plus ",
-      "categoryId": 1,
-      "description": " Brand :Thomson,Model Deluxe Plus, Type :Steam, ",
-      "price": 8499,
-      "isAvailble": true,
-      "productImg": "https://rukminim1.flixcart.com/image/832/832/xif0q/iron/y/n/h/-original-imaghxxhuchchz65.jpeg?q=70",
-      "rating": 5
     }
   ],
   "cartData": [
     {
-      "id": 14,
-      "productName": "Trolley Strong Metal Grid Basket Shelves",
-      "categoryId": 3,
-      "description": " HIGH QUALITY MATERIAL:The metal trays are anti-corrosion, waterproof and scratch-resistant while the thick metal steel frame makes it sturdy enough.It’s a great Kitchen storage organizer",
-      "price": 899,
+      "categoryId": 2,
+      "description": "boAt Airdopes 201 | TWS Wireless Earbuds with 10mm Drivers, 470mAh charging case, Up to 3 hours of audio bliss",
+      "quantity": 3,
+      "email": "piyush29041999@gmail.com",
+      "price": 1989,
+      "productImg": "https://img.freepik.com/free-photo/one-white-sneaker-shoe-isolated-white_93675-134695.jpg?w=2000",
+      "productName": "boAt Airdopes 201 ",
       "isAvailble": true,
-      "productImg": "https://clothesmania.in/wp-content/uploads/2022/04/5-1-768x673.jpg",
-      "rating": 5
+      "rating": 5,
+      "id": 1
     },
     {
-      "id": 5,
-      "productName": "The fault in our stars",
-      "categoryId": 5,
-      "description": "This one’s not your average love story! Hazel feels defined by her cancer diagnosis. When she meets Augustus Waters in a Cancer Kid Support Group, her outlook on life and her own future change rapidly. ",
-      "price": 299,
-      "isAvailble": true,
-      "productImg": "https://www.teachthought.com/storage/2021/12/81a4kCNuHL._AC_UY327_FMwebp_QL65_.webp",
-      "rating": 5
-    },
-    {
-      "id": 24,
-      "productName": "Godrej 5 in 1 Cooling 1.5 Ton  ",
       "categoryId": 1,
-      "description": "   1 Unit Washing Machine, Outlet Drain Pipe, User Manual,Fully Automatic Top Load,",
-      "price": 8499,
+      "description": "boAt Airdopes 201 | TWS Wireless Earbuds with 10mm Drivers, 470mAh charging case, Up to 3 hours of audio bliss",
+      "quantity": 1,
+      "email": "piyush29041999@gmail.com",
+      "price": 1999,
+      "productImg": "http://cdn.shopify.com/s/files/1/0057/8938/4802/products/14f33054-fb1f-4e9c-aa1b-08ff38646fd0.png?v=1625046508",
+      "productName": "boAt Airdopes 201 ",
       "isAvailble": true,
-      "productImg": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQbPjjU5kzrCqUadxJDvTE8ZCb2G4R-JPf1IHZV-AqjqiVfgaQvbwYR_o8zoIVai9kHfklO-lpIGPWWWvdxCR0CwQRNi8X02qjUAGuY_xOnJ0ZTdxqezMq-7w",
-      "rating": 5
+      "rating": 5,
+      "id": 2
+    },
+    {
+      "categoryId": 5,
+      "description": " Think And Grow Rich is a curation of the 13 most common habits of wealthy and successful people, distilled from studying over 500 individuals over the course of 20 years.",
+      "quantity": 1,
+      "email": "divyavyas1205@gmail.com",
+      "price": 200,
+      "productImg": "https://www.oberlo.com/media/1603897583-image16-1.jpg?w=1824&fit=max",
+      "productName": "Think And Grow Rick",
+      "isAvailble": true,
+      "rating": 3,
+      "id": 3
+    },
+    {
+      "categoryId": 5,
+      "description": "The Book Thief tells the story of Liesel, a little girl who is taken to a new home because her mother can't afford to take care of her. ",
+      "quantity": 1,
+      "email": "divyavyas1205@gmail.com",
+      "price": 300,
+      "productImg": "https://celadonbooks.com/wp-content/uploads/2019/02/the-book-thief.jpg",
+      "productName": "The Book Thief",
+      "isAvailble": true,
+      "rating": 4,
+      "id": 4
+    },
+    {
+      "categoryId": 5,
+      "description": "After his friend Hannah Baker takes her own life, Clay Jensen is surprised to discover a package with thirteen cassette tapes on his porch. ",
+      "quantity": 1,
+      "email": "divyavyas1205@gmail.com",
+      "price": 500,
+      "productImg": "https://www.teachthought.com/storage/2021/12/51rCn7hqisL._AC_UY327_FMwebp_QL65_.webp",
+      "productName": "13 Reasons Why",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 5
     }
   ],
   "categories": [
@@ -321,5 +261,40 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "User": [
+    {
+      "id": 1,
+      "name": "Divya Vyas",
+      "email": "divyavyas1205@gmail.com",
+      "password": "123456789",
+      "mob": "9876543210"
+    },
+    {
+      "name": "akshat jain",
+      "email": "akshatkumarjain27@gmail.com",
+      "password": "",
+      "mob": "",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Test User",
+      "email": "testuser@gmail.com",
+      "password": "123456789",
+      "mob": "9876543210"
+    },
+    {
+      "email": "piyush29041999@gmail.com",
+      "password": "",
+      "mob": "",
+      "id": 4
+    },
+    {
+      "email": "utsavibhoge14@gmail.com",
+      "password": "",
+      "mob": "",
+      "id": 5
+    }
+  ]
 }

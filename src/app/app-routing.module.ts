@@ -17,16 +17,18 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ViewProductByCategoryComponent } from './products/view-product-by-category/view-product-by-category.component';
 import { CartModuleComponent } from './cart-module/cart-module/cart-module.component';
+import { CheckoutComponent } from './BillingModule/checkout/checkout.component';
 
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/sign-in', pathMatch: 'full' },
+  { path: '', redirectTo: '/products', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
-  { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) ,canActivate:[AuthGuard]},
+  //{ path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) ,canActivate:[AuthGuard]},
+  { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
   {path:'order', component:ListOrderComponent},
   {path:"dashboard",component:DashboardComponent},
   {path:"adminDashboard",component:AdminDashboardComponent},
@@ -35,7 +37,8 @@ const routes: Routes = [
   {path:"category",component:AllCategoryComponent},
   {path:"updateItem/:id",component:UpdateItemComponent},
   {path:"cartItem",component:CartModuleComponent,canActivate:[AuthGuard]},
-  {path:"products/view-product-by-category/:id",component:ViewProductByCategoryComponent},
+  {path:"Checkout",component:CheckoutComponent},
+  {path:"products/view-product-by-category/:id",component:ViewProductByCategoryComponent}
   
 ];
 
