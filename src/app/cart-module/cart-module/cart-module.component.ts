@@ -25,6 +25,7 @@ export class CartModuleComponent implements OnInit {
   lock: boolean = false;
   tableLock: boolean = false;
   email: string = JSON.parse(localStorage.getItem('user')!).email;
+  itemValue:number=0;
   coupons:number=0;
 
   ngOnInit(): void {
@@ -188,7 +189,8 @@ export class CartModuleComponent implements OnInit {
         }
       }
       apply(){
-        this.coupons
+        this.coupons=this.itemValue;
+        this.itemValue=0
       }
     
 }

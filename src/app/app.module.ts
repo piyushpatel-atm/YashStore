@@ -58,7 +58,7 @@ import { CheckoutComponent } from './BillingModule/checkout/checkout.component';
      AllCategoryComponent,
      UpdateItemComponent,
      CartModuleComponent,
-     CheckoutComponent,
+     CheckoutComponent
     
 
   ],

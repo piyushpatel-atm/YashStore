@@ -41,7 +41,7 @@
                                 </div>
 
                                 <!-- <span class="span">Category ID : {{i.categoryId}} </span> -->
-                                <span class="span">  <mat-icon matSuffix>
+                                <span class="span" style="margin-left:20px">  <mat-icon matSuffix>
                                     {{showIcon(i)}}
                                   </mat-icon >rating : {{i.rating}} </span>
 
@@ -61,15 +61,16 @@
         <br><br><br><br><br><br><br><br>
 
         
-        <div class="col-sm-4 orderDetails"  >
+        <div class="col-sm-4 orderDetails">
             <div class="input-group my-4">
 
-                <input type="text" class="form-control" name="" placeholder="Promo code">
+                <h4 style="margin-right:30px; "><mat-icon >loyalty</mat-icon>COUPONS</h4><br><br>
+                <input type="text" class="form-control" name="" placeholder="Promo code" [(ngModel)]="itemValue">
 
                 <button class="btn btn-light text-primary" (click)="apply()">Apply</button>
 
             </div>
-            <h1>Order Details</h1>
+            <h1><u>Order Details</u></h1>
             <table class="table" style="text-align: left;">
                 <thead>
                   <tr>
@@ -90,17 +91,21 @@
                         <th scope="row">Delivery Charge</th>
                        <td class="text-decoration-line-through" >99 </td><i>FREE</i>
                     </tr>
+                    <tr>
+                        <th scope="row">Coupons</th>
+                       <td class="text-decoration-line-through" >{{coupons}}</td><i>FREE</i>
+                    </tr>
                 </tbody>
                 <br>
                 <tr >
                 
                     <b>Total Price</b>
-                    <td><b>Rs.{{totalPrice}}</b></td>
+                    <td><b>Rs.{{totalPrice-coupons}}</b></td>
                 </tr>
                 
               </table>
               <br><br>
-              <button class="btn btn-primary" routerLink="/products" style="margin-bottom: 20px; margin-left:40px;">ShopMore</button>
+              <button class="btn btn-primary" routerLink="/products" style="margin-bottom: 20px; margin-left:40px; background-color:gray">ShopMore</button>
               <!-- <button (click)="emptycart()" class="btn btn-danger" style="margin-right: 30px;">Empty cart</button> -->
               <button class="btn btn-danger" style="margin-left: 50px;margin-bottom: 20px;" routerLink="/Checkout">Order Now</button>
         </div>

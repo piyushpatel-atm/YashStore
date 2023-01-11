@@ -1,7 +1,8 @@
-<div class="formclass">
-    <div class="col-md-3">
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-5521508-4610092.png">
+<div class="container row">
+    <div class="col-md-6">
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-5521508-4610092.png" style="margin-top:80px; text-align: left; ">
     </div>
+    <div class="formclass col-md-6" >
     <form [formGroup]="item" (ngSubmit)="submit()" class="p-4 text-bg-light">
         <h1 style="color:black">Update Product</h1><br>
         <mat-form-field class="md col-6">
@@ -43,5 +44,6 @@
 
     </form>
 
+    </div>
 </div>
 

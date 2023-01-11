@@ -68,6 +68,6 @@ export class ViewAllComponent implements OnInit {
     }
   }
   
-    
+  
 
 }
