@@ -37,23 +37,12 @@ export class ViewProductByCategoryComponent implements OnInit {
     this.cs.setCartData(cardItem).subscribe();
     this.toastr.success("Item is added in cart successfully")
 
-    // this.cs.setCartData(data).subscribe();
-    // this.toastr.success("Item is added in cart successfully")
+    
     
   }
-    // OnClick(categoryId:any){
-    //   this.productservice.searchCategoryProduct(categoryId).subscribe(
-    //     list=>{this.productList=list; 
-    //     console.log(list);
-    //     }
-        
-    //     )
-    // }
+  
   ngOnInit(): void {
-   
-    // this.activatedRoute.queryParams.subscribe(data=>{
-    //   this.searchCategory=data['id'];
-    //   console.log(this.searchCategory);
+
 
       let categoryId=this.activatedRoute.snapshot.paramMap.get("id");
        console.log(categoryId);

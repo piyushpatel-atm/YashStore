@@ -369,6 +369,27 @@
       "password": "",
       "mob": "",
       "id": 5
+    },
+    {
+      "id": 6,
+      "name": "Utsavi Bhoge",
+      "email": "utsavibhoge8@gmail.com",
+      "password": "utsavi",
+      "mob": "9876543212"
+    },
+    {
+      "id": 7,
+      "name": "Utsavi Bhoge",
+      "email": "utsavibhoge14@gmail.com",
+      "password": "utsavi",
+      "mob": "9876543212"
+    },
+    {
+      "id": 8,
+      "name": "Utsavi Bhoge",
+      "email": "utsavibhoge@gmail.com",
+      "password": "utsavi",
+      "mob": "9876543212"
     }
   ]
 }

@@ -62,9 +62,7 @@ export class ViewAllComponent implements OnInit {
     this.router.navigate(['sign-in']);
     }
   }
-  numSequence(n: number): Array<number> {
-    return Array(n);
-  }
+  
     
 
 }

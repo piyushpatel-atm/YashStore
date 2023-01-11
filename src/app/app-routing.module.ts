@@ -38,7 +38,7 @@ const routes: Routes = [
   {path:"updateItem/:id",component:UpdateItemComponent},
   {path:"cartItem",component:CartModuleComponent,canActivate:[AuthGuard]},
   {path:"Checkout",component:CheckoutComponent},
-  {path:"products/view-product-by-category/:id",component:ViewProductByCategoryComponent}
+  { path: 'view-product-by-category/:id', component: ViewProductByCategoryComponent },
   
 ];
 
