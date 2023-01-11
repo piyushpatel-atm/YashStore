@@ -42,13 +42,21 @@
         <a mat-button routerLink="/cartItem"><mat-icon matSuffix>shopping_cart</mat-icon>
             <mat-label>Cart</mat-label>
         </a>
-     
+          
+
+
+
+
         <a  mat-button [matMenuTriggerFor]="adminDropdown"><mat-icon matSuffix>person</mat-icon>
             <mat-label>Admin </mat-label>
         </a>
         <mat-menu #adminDropdown  >
+
+
+
+
       
-      
+            
             <div class="list-group">
                 <a routerLink="/additem" class="list-group-item">Add Item</a>
             </div>
@@ -57,6 +65,49 @@
             </div>
             <router-outlet></router-outlet>
         </mat-menu>
+
+
+        <!-- <a  mat-button [matMenuTriggerFor]="categoryDropdown"><mat-icon matSuffix>person</mat-icon>
+            <mat-label>categoryDropdown </mat-label>
+        </a>
+        <mat-menu #categoryDropdown  >
+
+            <div class="mega-menu d-flex">
+                <div>
+                  <a href="#" class="d-block mb-1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17LtQeE3kuUI6G5SxmHATo2Ai8K0LMC-wjOepcGM1&s" style="height: 150px; width: 800px;" alt="Image" class="img-fluid mb-3"></a>
+                  <p><a href="#">PSD Mockups</a><span class="text-muted">View All Here</span></p>
+                </div>
+                <div>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Code(5) </a></li>
+                    <li><a href="#">Fonts(12) </a></li>
+                    <li><a href="#">HTML Templates(81) </a></li>
+                    <li><a href="#">Mockups(9) </a></li>
+                    <li><a href="#">Logo(16) </a></li>
+                    <li><a href="#">PSD Mockups(22) </a></li>
+                  </ul>
+                </div>
+                <div>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Sketch App(32) </a></li>
+                    <li><a href="#">User Interface(61) </a></li>
+                    <li><a href="#">WordPress(73) </a></li>
+                    <li><a href="#">User Experience(88) </a></li>
+                    <li><a href="#">WebGL(19) </a></li>
+                    <li><a href="#">Mockups(93) </a></li>
+                  </ul>
+                </div>
+              </div> -->
+
+
+
+      
+            
+            
+            <!-- <router-outlet></router-outlet>
+        </mat-menu> -->
+
+
     
     </mat-toolbar>
   

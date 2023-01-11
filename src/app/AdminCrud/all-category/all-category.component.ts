@@ -23,6 +23,12 @@ export class AllCategoryComponent implements OnInit {
 }
 Delete(id:any){
   this.cs.deleteItemValue(id).subscribe();
+  this.cs.getItemValue().subscribe(ul=>{
+    this.list=ul;
+  console.log(ul);
+  console.log(this.list);
+  });
+
   this.router.navigate(['category'])
 }
 Update(id:any){

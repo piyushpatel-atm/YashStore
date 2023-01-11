@@ -29,5 +29,8 @@ export class ViewAllComponent implements OnInit {
     this.toastr.success("Item is added in cart successfully")
     
   }
+  numSequence(n: number): Array<number> {
+    return Array(n);
+  }
 
 }
