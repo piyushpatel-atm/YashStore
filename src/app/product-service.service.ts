@@ -39,5 +39,17 @@ export class ProductServiceService {
   }
 
 
+  updateCart(id:number,data:any){
+    console.log(id,data)
+    return this.http.put<any>(this.url+"/cartData/"+id,data)
+  }
+
+  // removeAllCart(data:any){
+  //   // this.cartItemList=[];
+  //   // this.productList.next(this.cartItemList);
+
+  //   return this.http.delete(this.url + "/cartData/" , data);
+  // }
+
   
 }

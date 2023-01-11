@@ -5,6 +5,7 @@ export interface Product {
     description:string;
     rating:string;
     price:number;
+    quantity:number;
     productImg:string;  
     isAvailble:boolean;
  

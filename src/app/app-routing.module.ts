@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
-  { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) ,canActivate:[AuthGuard]},
+  { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)},
   {path:'order', component:ListOrderComponent},
   {path:"dashboard",component:DashboardComponent},
   {path:"adminDashboard",component:AdminDashboardComponent},
@@ -34,7 +34,7 @@ const routes: Routes = [
   {path:"Loginadmin",component:LoginAdminComponent},
   {path:"category",component:AllCategoryComponent},
   {path:"updateItem/:id",component:UpdateItemComponent},
-  {path:"cartItem",component:CartModuleComponent,canActivate:[AuthGuard]}
+  {path:"cartItem",component:CartModuleComponent}
   // {path:"products/view-product-by-category/:id",component:ViewProductByCategoryComponent}
 ];
 

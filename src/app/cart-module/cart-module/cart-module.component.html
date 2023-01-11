@@ -26,7 +26,7 @@
         </div>
     </div>
 </section> -->
-<ng-container *ngIf="lock">
+ <ng-container *ngIf="lock">
 <div class="container">
     <div class="card">
         <h5 class="card-title" style="font-size: 40px;">My Cart</h5>
@@ -40,7 +40,9 @@
     </div>
 </div>
 </ng-container>
-<ng-container *ngIf="tableLock">
+
+
+<!--<ng-container *ngIf="tableLock">
     <div class="container">
         <div class="card-table">
             <div class="cart-product">
@@ -52,6 +54,7 @@
                             <th>Description</th>
                             <th>Category</th>
                             <th>Rating</th>
+                            <th>Quantity</th>
                             <th>Price</th>
                             <th>Active</th>
                             <th>Delete</th>
@@ -64,6 +67,11 @@
                             <td>{{i.description}}</td>
                             <td>{{i.categoryId}}</td>
                             <td>{{i.rating}}</td>
+                            <td>
+                                <button  class="btn btn-light" (click)="inc(i)"><mat-icon>add</mat-icon></button>
+                                    <span class="span">{{i.quantity}}</span>
+                                    <button class="btn btn-light btn-sm" (click)="dec(i)" style="margin-right: 50px;"><mat-icon>remove</mat-icon></button>
+                            </td>
                             <td>{{i.price}}</td>
                             <td>{{i.isAvailble}}</td>
                             <td>
@@ -103,3 +111,151 @@
     </div>
 </ng-container>
 
+
+ -->
+
+<!-- my code -->
+
+<ng-container *ngIf="!lock">
+
+    <div class="row no-gutters">
+
+        <div class="col-sm-8 details">
+        
+                <div class="card" style="width: 600px; height: 300px " *ngFor="let i of cartList">
+                    <div class="row no-gutters">
+                        <div class="col-sm-5">
+                            <img class="card-img" src="{{i.productImg}}" class="rounded-end" alt=" image not loaded!">
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-body">
+                                <h5 class="card-title">{{i.productName}}</h5>
+                                <p class="card-text">{{i.description}}</p>
+
+                                <button class="btn btn-secondary" style="margin-right: 20px;"  > Quantity : {{i.quantity}}</button>
+                                <button class="btn btn-info" > Price : Rs.{{i.price}}</button><br><br>
+
+                                <div class="inc-dec-button">
+
+                                    <button  class="btn btn-light" (click)="inc(i)"><mat-icon>add</mat-icon></button>
+                                    <!-- <button mat-raised-button color="accent" (click)="inc(item)"><mat-icon>add</mat-icon></button> -->
+                                    <span class="span"> {{i.quantity}} </span>
+                                    <button class="btn btn-light btn-sm" (click)="dec(i)" style="margin-right: 50px;"><mat-icon>remove</mat-icon></button>
+                                    <button (click)="remove(i)" class="btn btn-light btn-sm" ><mat-icon color="warn">delete</mat-icon></button>
+                                    
+                                </div>
+
+                                <span class="span">Category ID : {{i.categoryId}} </span>
+                                <span class="span">  <mat-icon>
+                                    {{showIcon(i)}}
+                                  </mat-icon>{{i.rating}} </span>
+
+                                <div>
+
+                                </div>
+                                <!-- <a href="#" class="btn btn-primary">View Profile</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+           
+           
+        </div>
+
+        <br><br><br><br><br><br><br><br>
+
+        
+        <div class="col-sm-4 orderDetails"  >
+            <div class="input-group my-4">
+
+                <input type="text" class="form-control" name="" placeholder="Promo code">
+
+                <button class="btn btn-light text-primary" (click)="apply()">Apply</button>
+
+            </div>
+            <h1>Order Details</h1>
+            <table class="table" style="text-align: left;">
+                <thead>
+                  <tr>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Price</th>
+                  </tr>
+                </thead>
+
+                <tbody *ngFor="let products of cartList">
+                  <tr>
+                    <th scope="row">{{products.productName}}</th>
+                    <td>{{products.price}}</td>
+                  </tr>
+                </tbody><br>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Delivery Charge</th>
+                       <i><td class="text-decoration-line-through" >99</td>FREE</i> 
+                    </tr>
+                </tbody>
+                <tr><b>Total Price</b>
+                    <td>{{totalPrice}}</td>
+                </tr>
+                
+              </table>
+              <button class="btn btn-primary" routerLink="/products" style="margin-bottom: 20px; margin-left:60px;">ShopMore</button>
+              <!-- <button (click)="emptycart()" class="btn btn-danger" style="margin-right: 30px;">Empty cart</button> -->
+              <button class="btn btn-danger" style="margin-left: 50px;margin-bottom: 20px;">Order Now</button>
+        </div>
+       
+    </div>
+
+</ng-container>
+
+
+<!-- coupen -->
+
+<!-- <div class="container">
+    <div class="card">
+           <div class="form">
+               <div class="left-side">
+                       <span class="triangle "></span>
+                       <div class="flattext"><h2>FLAT $40 OFF</h2></div>
+               </div>
+               <div class="right-side">
+                   <div class="upper-content">
+                       <div class="flat">
+                           <p>AVAIL FLAT</p>
+                           <h3>$40 OFF</h3>
+                           <h4>+ FREE DELIVERY</h4>
+                       </div>
+                       <img src="https://i.imgur.com/W4V3L6j.png">
+                   </div>
+                   <div class="middle-content">
+                       <div class="coupon">
+                           <h4>Coupon code : </h4>
+                           <h3>MYNTRA $40</h3>
+                           <p>Applicable on your first order</p>
+                       </div>
+                       <button>Sign up now</button>
+                   </div>
+                   <hr>
+                   <div class="last">
+                     
+                       <div class="quality">
+                                <img src="https://imgur.com/a0TMZC7.jpg">
+                                 <p>Genuine Products</p>
+                       </div>
+                       <div class="quality">
+                                 <img src="https://imgur.com/8IZhLGS.jpg">
+                                 <p>Try & Buy</p>
+                       </div>
+                       <div class="quality">
+                                 <img src="https://imgur.com/TezkMX1.jpg">
+                                 <p>Easy Exchanges</p>
+                       </div>
+                    
+                   </div>
+   
+               </div>
+           </div>
+    </div>
+   </div> -->
