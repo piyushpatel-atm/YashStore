@@ -1,7 +1,8 @@
-import { Component, NgZone } from '@angular/core';
+import { Component, ElementRef, NgZone, ViewChild,OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
+import {jsPDF} from 'jspdf';
 import { ToastrService } from 'ngx-toastr';
 import { ProductServiceService } from 'src/app/product-service.service';
 import { cartProduct } from 'src/app/products/product';
@@ -10,7 +11,8 @@ import { cartProduct } from 'src/app/products/product';
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css']
 })
-export class CheckoutComponent {
+export class CheckoutComponent implements OnInit {
+ 
 
   constructor(public cs: ProductServiceService,
     public router: Router,
@@ -42,6 +44,23 @@ export class CheckoutComponent {
       });
     });
 
+
+  }
+
+  @ViewChild('content', {static: false}) el!:ElementRef;
+
+  generatePDF(){
+
+    let pdf = new jsPDF('p','pt','a4');
+    pdf.html(this.el.nativeElement,{
+      callback:(pdf)=>{
+
+         pdf.save("Invoice.pdf");
+
+      }
+    });
+  }
+  ngonInit(){
 
   }
 }

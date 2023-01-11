@@ -69,13 +69,13 @@
     },
     {
       "id": 7,
+      "price": "1500",
+      "productImg": "https://shopelse.in/wp-content/uploads/2022/08/H6fb419c077af4545b7bc67975fda55d6z.jpg",
       "productName": "remote control  car",
       "categoryId": 4,
       "description": "kids toys 2.4G 1:18 series remote control racing car speed with light",
-      "price": 799,
-      "isAvailble": true,
-      "productImg": "https://shopelse.in/wp-content/uploads/2022/08/H6fb419c077af4545b7bc67975fda55d6z.jpg",
-      "rating": 5
+      "rating": 5,
+      "isAvailble": true
     },
     {
       "id": 8,
@@ -95,16 +95,6 @@
       "price": 599,
       "isAvailble": true,
       "productImg": "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/20475986/2022/10/20/f3a4530f-204a-4c67-b504-a763f0f92eff1666276624609DearJoyKidsGreyBrownElephantMonkeySoftToy1.jpg",
-      "rating": 5
-    },
-    {
-      "id": 10,
-      "productName": "Unicorn",
-      "categoryId": 4,
-      "description": " unicorn stuffed toy covered by high quality plush fabric with soft pp cotton inserts, which has excellent performance on elasticity and bulkiness.",
-      "price": 1099,
-      "isAvailble": true,
-      "productImg": "https://rukminim1.flixcart.com/image/832/832/ku04o7k0/stuffed-toy/x/m/9/unicorn-red-25-cm-soft-toy-baby-toys-kids-toy-toy-for-girl-original-imag7867zsjzngbb.jpeg?q=70",
       "rating": 5
     },
     {
@@ -264,6 +254,114 @@
       "isAvailble": true,
       "rating": 5,
       "id": 8
+    },
+    {
+      "categoryId": 5,
+      "description": " Think And Grow Rich is a curation of the 13 most common habits of wealthy and successful people, distilled from studying over 500 individuals over the course of 20 years.",
+      "quantity": 1,
+      "email": "madhvijasodiya20@gmail.com",
+      "price": 200,
+      "productImg": "https://www.oberlo.com/media/1603897583-image16-1.jpg?w=1824&fit=max",
+      "productName": "Think And Grow Rick",
+      "isAvailble": true,
+      "rating": 3,
+      "id": 11
+    },
+    {
+      "categoryId": 5,
+      "description": "The Book Thief tells the story of Liesel, a little girl who is taken to a new home because her mother can't afford to take care of her. ",
+      "quantity": 2,
+      "email": "madhvijasodiya20@gmail.com",
+      "price": 300,
+      "productImg": "https://celadonbooks.com/wp-content/uploads/2019/02/the-book-thief.jpg",
+      "productName": "The Book Thief",
+      "isAvailble": true,
+      "rating": 4,
+      "id": 12
+    },
+    {
+      "categoryId": 4,
+      "description": "kids toys 2.4G 1:18 series remote control racing car speed with light",
+      "quantity": 2,
+      "email": "madhvijasodiya20@gmail.com",
+      "price": 799,
+      "productImg": "https://shopelse.in/wp-content/uploads/2022/08/H6fb419c077af4545b7bc67975fda55d6z.jpg",
+      "productName": "remote control  car",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 13
+    },
+    {
+      "categoryId": 5,
+      "description": " Think And Grow Rich is a curation of the 13 most common habits of wealthy and successful people, distilled from studying over 500 individuals over the course of 20 years.",
+      "quantity": 1,
+      "email": "madhvijasodiya20@gmail.com",
+      "price": 200,
+      "productImg": "https://www.oberlo.com/media/1603897583-image16-1.jpg?w=1824&fit=max",
+      "productName": "Think And Grow Rick",
+      "isAvailble": true,
+      "rating": 3,
+      "id": 14
+    },
+    {
+      "categoryId": 4,
+      "description": "The removable accessories allow this tricycle to grow with your child. Seat is spacious with a back rest for kids to make seating and posture comfortable .",
+      "quantity": 1,
+      "email": "madhvijasodiya20@gmail.com",
+      "price": 299,
+      "productImg": "https://cdn.fcglcdn.com/brainbees/images/products/438x531/11525180a.webp",
+      "productName": "Tricycle",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 15
+    },
+    {
+      "categoryId": 4,
+      "description": "The removable accessories allow this tricycle to grow with your child. Seat is spacious with a back rest for kids to make seating and posture comfortable .",
+      "quantity": 1,
+      "email": "madhvijasodiya20@gmail.com",
+      "price": 299,
+      "productImg": "https://cdn.fcglcdn.com/brainbees/images/products/438x531/11525180a.webp",
+      "productName": "Tricycle",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 16
+    },
+    {
+      "categoryId": 4,
+      "description": "kids toys 2.4G 1:18 series remote control racing car speed with light",
+      "quantity": 1,
+      "email": "madhvijasodiya20@gmail.com",
+      "price": "1500",
+      "productImg": "https://shopelse.in/wp-content/uploads/2022/08/H6fb419c077af4545b7bc67975fda55d6z.jpg",
+      "productName": "remote control  car",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 18
+    },
+    {
+      "categoryId": 4,
+      "description": "The removable accessories allow this tricycle to grow with your child. Seat is spacious with a back rest for kids to make seating and posture comfortable .",
+      "quantity": 1,
+      "email": "madhvijasodiya20@gmail.com",
+      "price": 299,
+      "productImg": "https://cdn.fcglcdn.com/brainbees/images/products/438x531/11525180a.webp",
+      "productName": "Tricycle",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 19
+    },
+    {
+      "categoryId": 5,
+      "description": "The Book Thief tells the story of Liesel, a little girl who is taken to a new home because her mother can't afford to take care of her. ",
+      "quantity": 1,
+      "email": "madhvijasodiya20@gmail.com",
+      "price": 300,
+      "productImg": "https://celadonbooks.com/wp-content/uploads/2019/02/the-book-thief.jpg",
+      "productName": "The Book Thief",
+      "isAvailble": true,
+      "rating": 4,
+      "id": 20
     }
   ],
   "categories": [
@@ -331,6 +429,20 @@
       "password": "",
       "mob": "",
       "id": 5
+    },
+    {
+      "id": 6,
+      "name": "Madhvi Jasodiya",
+      "email": "madhvijasodiya20@gmail.com",
+      "password": "123456789",
+      "mob": "7999115765"
+    },
+    {
+      "id": 7,
+      "name": "Jaynam Sanghvi",
+      "email": "jaynam.sanghvi@yash.com",
+      "password": "jaynam",
+      "mob": "9876543212"
     }
   ]
 }
