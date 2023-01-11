@@ -186,7 +186,8 @@
       "isAvailble": true,
       "productImg": "https://rukminim1.flixcart.com/image/832/832/k9loccw0/mobile/6/8/g/apple-iphone-se-mxvv2hn-a-original-imafrcqmfh4zznmq.jpeg?q=70",
       "rating": 5
-    }, {
+    },
+    {
       "id": 19,
       "productName": " ZEBRONICS ZEB-WARRIOR",
       "categoryId": 1,
@@ -195,7 +196,8 @@
       "isAvailble": true,
       "productImg": "https://rukminim1.flixcart.com/image/832/832/k5vcya80pkrrdj/speaker/laptop-desktop-speaker/9/h/z/zebronics-zeb-warrior-original-imafmyptqxt2dubt.jpeg?q=70",
       "rating": 3
-    }, {
+    },
+    {
       "id": 20,
       "productName": " Maizic Smartwatch",
       "categoryId": 1,
@@ -204,7 +206,8 @@
       "isAvailble": true,
       "productImg": "https://rukminim1.flixcart.com/image/832/832/kxhvf680/smart-band-tag/c/h/l/led-yes-medium-50-yes-yes-maizic-a1-android-windows-ios-maizic-original-imag9xvfkbry7g7h.jpeg?q=70",
       "rating": 4
-    }, {
+    },
+    {
       "id": 21,
       "productName": " JBL Tune ",
       "categoryId": 1,
@@ -254,30 +257,6 @@
     },
     {
       "categoryId": 5,
-      "description": " Think And Grow Rich is a curation of the 13 most common habits of wealthy and successful people, distilled from studying over 500 individuals over the course of 20 years.",
-      "quantity": 1,
-      "email": "piyush29041999@gmail.com",
-      "price": 200,
-      "productImg": "https://www.oberlo.com/media/1603897583-image16-1.jpg?w=1824&fit=max",
-      "productName": "Think And Grow Rick",
-      "isAvailble": true,
-      "rating": 3,
-      "id": 6
-    },
-    {
-      "categoryId": 5,
-      "description": "The Book Thief tells the story of Liesel, a little girl who is taken to a new home because her mother can't afford to take care of her. ",
-      "quantity": 1,
-      "email": "piyush29041999@gmail.com",
-      "price": 300,
-      "productImg": "https://celadonbooks.com/wp-content/uploads/2019/02/the-book-thief.jpg",
-      "productName": "The Book Thief",
-      "isAvailble": true,
-      "rating": 4,
-      "id": 7
-    },
-    {
-      "categoryId": 5,
       "description": " Greg is an extremely relatable protagonist attending middle school and dealing with bullies, hormones, puberty, and social dynamics. ",
       "quantity": 1,
       "email": "piyush29041999@gmail.com",
@@ -299,6 +278,30 @@
       "isAvailble": true,
       "rating": 5,
       "id": 9
+    },
+    {
+      "categoryId": 5,
+      "description": " Think And Grow Rich is a curation of the 13 most common habits of wealthy and successful people, distilled from studying over 500 individuals over the course of 20 years.",
+      "quantity": 1,
+      "email": "piyush29041999@gmail.com",
+      "price": 200,
+      "productImg": "https://www.oberlo.com/media/1603897583-image16-1.jpg?w=1824&fit=max",
+      "productName": "Think And Grow Rick",
+      "isAvailble": true,
+      "rating": 3,
+      "id": 10
+    },
+    {
+      "categoryId": 4,
+      "description": "kids toys 2.4G 1:18 series remote control racing car speed with light",
+      "quantity": 1,
+      "email": "piyush29041999@gmail.com",
+      "price": 799,
+      "productImg": "https://shopelse.in/wp-content/uploads/2022/08/H6fb419c077af4545b7bc67975fda55d6z.jpg",
+      "productName": "remote control  car",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 11
     }
   ],
   "categories": [
