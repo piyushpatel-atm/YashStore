@@ -32,6 +32,7 @@ export class AddItemComponent implements OnInit{
   submit(){
     if(this.item.valid)
     {
+      this.item.value.quantity=5;
     // this.fb.setItemValue(this.item.value).subscribe();
     this.service.createProduct(this.item.value).subscribe();
     window.alert("Add succesfully");

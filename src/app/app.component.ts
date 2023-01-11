@@ -7,6 +7,7 @@ import { Route, Router } from '@angular/router';
 import { AuthService } from './shared/services/auth.service';
 import { UserService } from './shared/user.service';
 import { UserForm } from './shared/data-type';
+import { CartModuleComponent } from './cart-module/cart-module/cart-module.component';
 
 @Component({
   selector: 'app-root',
@@ -27,12 +28,12 @@ export class AppComponent implements OnInit {
   //header and footer aprox
 
   userName: string | undefined;
-
+  itemCount:number=0;
   constructor(
     private activatedRoute: ActivatedRoute,
     private productsService: ProductService,
     public authService: AuthService,
-    public userService: UserService
+    public userService: UserService,
   ) {}
   ngOnInit(): void {
     this.productsService.getCategory().subscribe((data) => {

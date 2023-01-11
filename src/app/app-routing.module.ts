@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ViewProductByCategoryComponent } from './products/view-product-by-category/view-product-by-category.component';
 import { CartModuleComponent } from './cart-module/cart-module/cart-module.component';
 import { CheckoutComponent } from './BillingModule/checkout/checkout.component';
+import { FinallbillComponent } from './BillingModule/finallbill/finallbill.component';
 
 
 const routes: Routes = [
@@ -38,7 +39,8 @@ const routes: Routes = [
   {path:"updateItem/:id",component:UpdateItemComponent},
   {path:"cartItem",component:CartModuleComponent,canActivate:[AuthGuard]},
   {path:"Checkout",component:CheckoutComponent},
-  {path:"products/view-product-by-category/:id",component:ViewProductByCategoryComponent}
+  {path:"products/view-product-by-category/:id",component:ViewProductByCategoryComponent},
+  {path:"finalbill",component:FinallbillComponent}
   
 ];
 

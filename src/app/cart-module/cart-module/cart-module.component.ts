@@ -5,7 +5,8 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ProductServiceService } from 'src/app/product-service.service';
 import { cartProduct, Product } from 'src/app/products/product';
-import { AuthService } from 'src/app/shared/services/auth.service'
+import { AuthService } from 'src/app/shared/services/auth.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-cart-module',
@@ -15,18 +16,21 @@ import { AuthService } from 'src/app/shared/services/auth.service'
 export class CartModuleComponent implements OnInit {
 
   userData: any; // Save logged in user data
+ 
   constructor(public cs: ProductServiceService, public router: Router, private toastr: ToastrService,
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
     public ngZone: NgZone) { }
   totalPrice: number = 0;
   cartList: cartProduct[] = [];
+  
   lock: boolean = false;
   tableLock: boolean = false;
   email: string = JSON.parse(localStorage.getItem('user')!).email;
   coupons:number=0;
 
   ngOnInit(): void {
+  
     this.cartList = []
     this.cs.getCartData().subscribe(list => {
       list.forEach(element => {

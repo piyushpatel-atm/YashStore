@@ -13,9 +13,13 @@ img{
 }
 .img{
     height: 200px;
-    width: 240px;
+    width: 280px;
 }
 button{
   margin: 10px;
   width: 180px;
+}
+.row{
+    margin-top: 0px;
+    margin-left: 20px;
 }

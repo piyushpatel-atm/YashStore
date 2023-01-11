@@ -37,6 +37,9 @@ import { CartModuleComponent } from './cart-module/cart-module/cart-module.compo
 import { ToastrModule } from 'ngx-toastr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CheckoutComponent } from './BillingModule/checkout/checkout.component';
+import { FrontPageComponent } from './front-page/front-page.component';
+import { FinallbillComponent } from './BillingModule/finallbill/finallbill.component';
+import { PaymentdialogComponent } from './BillingModule/paymentdialog/paymentdialog.component';
 
 
 @NgModule({
@@ -59,6 +62,9 @@ import { CheckoutComponent } from './BillingModule/checkout/checkout.component';
      UpdateItemComponent,
      CartModuleComponent,
      CheckoutComponent,
+     FrontPageComponent,
+     FinallbillComponent,
+     PaymentdialogComponent,
     
 
   ],
