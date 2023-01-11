@@ -13,7 +13,7 @@ import { AuthService } from 'src/app/shared/services/auth.service'
   styleUrls: ['./cart-module.component.css']
 })
 export class CartModuleComponent implements OnInit {
-  
+
   userData: any; // Save logged in user data
   constructor(public cs: ProductServiceService, public router: Router, private toastr: ToastrService,
     public afs: AngularFirestore, // Inject Firestore service
@@ -25,7 +25,7 @@ export class CartModuleComponent implements OnInit {
   tableLock: boolean = false;
   email: string = JSON.parse(localStorage.getItem('user')!).email;
   ngOnInit(): void {
-    this.cartList=[]
+    this.cartList = []
     this.cs.getCartData().subscribe(list => {
       list.forEach(element => {
         console.log(element)
@@ -40,16 +40,16 @@ export class CartModuleComponent implements OnInit {
 
       if (this.cartList.length <= 0) {
         this.lock = true;
-        this.totalPrice=0
+        this.totalPrice = 0
       } else {
         this.tableLock = true;
       }
       this.cartList.forEach(list => {
         console.log(list.price)
-        this.totalPrice += list.price*list.quantity;
+        this.totalPrice += list.price * list.quantity;
         console.log(list.quantity)
-        console.log(typeof(this.totalPrice))
-        
+        console.log(typeof (this.totalPrice))
+
 
       });
     });
@@ -69,12 +69,12 @@ export class CartModuleComponent implements OnInit {
       });
       if (this.cartList.length <= 0) {
         this.lock = true;
-        this.totalPrice=0
+        this.totalPrice = 0
       } else {
         this.tableLock = true;
       };
       this.cartList.forEach(list => {
-        this.totalPrice += (list.price*list.quantity)
+        this.totalPrice += (list.price * list.quantity)
 
       })
     });
@@ -84,15 +84,15 @@ export class CartModuleComponent implements OnInit {
   }
 
   inc(i: any) {
- // console.log(item.quantity);
+    // console.log(item.quantity);
 
     if (i.quantity != 5) {
       i.quantity += 1;
       this.cs.updateCart(i.id, i).subscribe();
-      this.totalPrice=0;
+      this.totalPrice = 0;
       this.cartList = [];
     }
-    
+
     this.cs.getCartData().subscribe(list => {
       list.forEach(element => {
         if (element.email == this.email) {
@@ -101,12 +101,12 @@ export class CartModuleComponent implements OnInit {
       });
       if (this.cartList.length <= 0) {
         this.lock = true;
-        this.totalPrice=0
+        this.totalPrice = 0
       } else {
         this.tableLock = true;
       };
       this.cartList.forEach(list => {
-        this.totalPrice += (list.price*list.quantity)
+        this.totalPrice += (list.price * list.quantity)
 
       })
     });
@@ -136,31 +136,32 @@ export class CartModuleComponent implements OnInit {
     // });
     this.router.navigate(['cartItem'])
   }
-  dec(i:any){
+  dec(i: any) {
     // console.log(item);
-     if(i.quantity != 1){
-    i.quantity -= 1;
-    this.cs.updateCart(i.id, i).subscribe();
-    this.totalPrice=0;
-    this.cartList = [];
-    this.cs.getCartData().subscribe(list => {
-      list.forEach(element => {
-        if (element.email == this.email) {
-          this.cartList.push(element)
-        }
-      });
-      if (this.cartList.length <= 0) {
-        this.lock = true;
-        this.totalPrice=0
-      } else {
-        this.tableLock = true;
-      };
-      this.cartList.forEach(list => {
-        
-        this.totalPrice += (list.price*list.quantity)
+    if (i.quantity != 1) {
+      i.quantity -= 1;
+      this.cs.updateCart(i.id, i).subscribe();
+      this.totalPrice = 0;
+      this.cartList = [];
+      this.cs.getCartData().subscribe(list => {
+        list.forEach(element => {
+          if (element.email == this.email) {
+            this.cartList.push(element)
+          }
+        });
+        if (this.cartList.length <= 0) {
+          this.lock = true;
+          this.totalPrice = 0
+        } else {
+          this.tableLock = true;
+        };
+        this.cartList.forEach(list => {
 
-      })
-    });
-      }}
+          this.totalPrice += (list.price * list.quantity)
+
+        })
+      });
+    }
+  }
 }
 

@@ -137,25 +137,29 @@
 
                     <dl class="dlist-align">
                         <dt>Total price:</dt>
-                        <dd class="text-end">${{totalPrice}}</dd>
+                        <dd class="text-end">Rs.{{totalPrice}}</dd>
                     </dl>
                     <dl class="dlist-align">
                         <dt>Discount:</dt>
-                        <dd class="text-end text-danger">- ${{Discount}}</dd>
+                        <dd class="text-end text-danger">- Rs.{{Discount}}</dd>
                     </dl>
                     <dl class="dlist-align">
                         <dt>Shipping cost:</dt>
-                        <dd class="text-end">+ ${{shipping}}</dd>
+                        <dd class="text-end">+ Rs.{{shipping}}</dd>
+                    </dl>
+                    <dl class="dlist-align">
+                        <dt>Coupons:</dt>
+                        <dd class="text-end">- Rs.{{coupons}}</dd>
                     </dl>
                     <hr>
                     <dl class="dlist-align">
                         <dt> Total: </dt>
-                        <dd class="text-end"> <strong class="text-dark">{{totalPrice+shipping-Discount}}</strong> </dd>
+                        <dd class="text-end"> <strong class="text-dark">{{totalPrice+shipping-Discount-coupons}}</strong> </dd>
                     </dl>
 
                     <div class="input-group my-4">
                         <input type="text" class="form-control" name="" placeholder="Promo code">
-                        <button class="btn btn-light text-primary">Apply</button>
+                        <button class="btn btn-light text-primary" (click)="apply()">Apply</button>
                     </div>
 
                     <hr>
