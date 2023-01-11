@@ -44,4 +44,13 @@ export class ProductServiceService {
 
 
   
+
+  // removeAllCart(data:any){
+  //   // this.cartItemList=[];
+  //   // this.productList.next(this.cartItemList);
+
+  //   return this.http.delete(this.url + "/cartData/" , data);
+  // }
+
+  
 }

@@ -24,6 +24,8 @@ export class CartModuleComponent implements OnInit {
   lock: boolean = false;
   tableLock: boolean = false;
   email: string = JSON.parse(localStorage.getItem('user')!).email;
+  coupons:number=0;
+
   ngOnInit(): void {
     this.cartList=[]
     this.cs.getCartData().subscribe(list => {
@@ -75,14 +77,13 @@ export class CartModuleComponent implements OnInit {
       };
       this.cartList.forEach(list => {
         this.totalPrice += (list.price*list.quantity)
-
       })
     });
     this.toastr.warning("Data Remove from Cart")
 
     this.router.navigate(['/cartItem'])
   }
-
+    
   inc(i: any) {
  // console.log(item.quantity);
 
@@ -162,5 +163,16 @@ export class CartModuleComponent implements OnInit {
       })
     });
       }}
+      showIcon(i:any) {
+        if (i.rating >= i+ 1) {
+          return 'star';
+        } else {
+          return 'star_border';
+        }
+      }
+      apply(){
+        this.coupons
+      }
+    
 }
 
