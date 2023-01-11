@@ -7,6 +7,7 @@ import { Route, Router } from '@angular/router';
 import { AuthService } from './shared/services/auth.service';
 import { UserService } from './shared/user.service';
 import { UserForm } from './shared/data-type';
+import { ProductServiceService } from './product-service.service';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,6 @@ export class AppComponent implements OnInit {
   title = 'yashStore';
   searchCategory!: string;
   categoryList!: Category[];
-
   screenHeight: any = window.innerHeight;
   screenWidth: any = window.innerWidth;
   footerMaxHeight: number = this.screenHeight - 130;
@@ -32,7 +32,8 @@ export class AppComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private productsService: ProductService,
     public authService: AuthService,
-    public userService: UserService
+    public userService: UserService,
+    public ps: ProductServiceService
   ) {}
   ngOnInit(): void {
     this.productsService.getCategory().subscribe((data) => {
@@ -58,10 +59,27 @@ export class AppComponent implements OnInit {
           this.userService.UserPost(uPost).subscribe((result) => {
             console.log(result);
           });
+
+          
         } else {
           console.warn(result);
           this.userName = result[0].name;
         }
+
+        let cartList=[];
+          this.ps.getCartData().subscribe(list => {
+            list.forEach(element => {
+              console.log(element)
+              if (element.email === userData.email) {
+                console.log(element)
+                cartList.push(element)
+              }
+      
+            });
+      
+            this.ps.cartCount(cartList.length);
+      
+          });
       });
     }
   }

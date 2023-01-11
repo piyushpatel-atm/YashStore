@@ -54,7 +54,12 @@ export class ViewAllComponent implements OnInit {
     cardItem.rating=data.rating;
     console.log(cardItem,"string");
     console.log(this.email)
-    this.cs.setCartData(cardItem).subscribe();
+    this.cs.setCartData(cardItem).subscribe((res)=>{
+      
+    this.cs.cartCount(++ProductServiceService.itemCount);
+
+
+    });
     this.toastr.success("Item is added in cart successfully")
     
    }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { cartProduct, Product } from './products/product';
 import { itemmodule } from './shared/data-type';
 
@@ -8,7 +8,12 @@ import { itemmodule } from './shared/data-type';
   providedIn: 'root'
 })
 export class ProductServiceService {
-
+  static itemCount:number = 0;
+  cartSubject=new BehaviorSubject<number>(0);
+  cartCount(itemCount:number) {
+    ProductServiceService.itemCount = itemCount;
+    this.cartSubject.next(itemCount);
+  }
   constructor(public http: HttpClient) { }
   url: string = "http://localhost:3000";
   setItemValue(data:itemmodule) {

@@ -17,7 +17,7 @@
 
         <div class="col-sm-8 details">
         
-                <div class="card" style="width: 600px; height: 300px " *ngFor="let i of cartList">
+                <div class="card" style="width: 600px; height: 320px " *ngFor="let i of cartList">
                     <div class="row no-gutters">
                         <div class="col-sm-5">
                             <img class="card-img" src="{{i.productImg}}" class="rounded-end" alt=" image not loaded!">
@@ -40,10 +40,10 @@
                                     
                                 </div>
 
-                                <span class="span">Category ID : {{i.categoryId}} </span>
-                                <span class="span">  <mat-icon>
+                                <!-- <span class="span">Category ID : {{i.categoryId}} </span> -->
+                                <span class="span">  <mat-icon matSuffix>
                                     {{showIcon(i)}}
-                                  </mat-icon>{{i.rating}} </span>
+                                  </mat-icon >rating : {{i.rating}} </span>
 
                                 <div>
 

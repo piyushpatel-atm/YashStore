@@ -15,6 +15,7 @@ import { AuthService } from 'src/app/shared/services/auth.service'
 export class CartModuleComponent implements OnInit {
 
   userData: any; // Save logged in user data
+  
   constructor(public cs: ProductServiceService, public router: Router, private toastr: ToastrService,
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
@@ -39,6 +40,8 @@ export class CartModuleComponent implements OnInit {
         }
 
       });
+
+      this.cs.cartCount(this.cartList.length);
 
       if (this.cartList.length <= 0) {
         this.lock = true;
@@ -69,6 +72,9 @@ export class CartModuleComponent implements OnInit {
           this.cartList.push(element)
         }
       });
+      
+    this.cs.cartCount(this.cartList.length);
+
       if (this.cartList.length <= 0) {
         this.lock = true;
         this.totalPrice = 0
@@ -81,6 +87,7 @@ export class CartModuleComponent implements OnInit {
       })
     });
     this.toastr.warning("Data Remove from Cart")
+
 
     this.router.navigate(['/cartItem'])
   }
@@ -101,6 +108,9 @@ export class CartModuleComponent implements OnInit {
           this.cartList.push(element)
         }
       });
+      
+    this.cs.cartCount(this.cartList.length);
+
       if (this.cartList.length <= 0) {
         this.lock = true;
         this.totalPrice = 0
@@ -112,6 +122,7 @@ export class CartModuleComponent implements OnInit {
 
       })
     });
+
 
     // this.cs.getCartData().subscribe(list => {
     //   this.cartList = list;
@@ -151,6 +162,9 @@ export class CartModuleComponent implements OnInit {
             this.cartList.push(element)
           }
         });
+        
+    this.cs.cartCount(this.cartList.length);
+
         if (this.cartList.length <= 0) {
           this.lock = true;
           this.totalPrice = 0
@@ -163,6 +177,8 @@ export class CartModuleComponent implements OnInit {
 
       })
     });
+    
+
       }}
       showIcon(i:any) {
         if (i.rating >= i+ 1) {

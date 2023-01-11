@@ -1,9 +1,10 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { ActivatedRoute, TitleStrategy } from '@angular/router';
+import { ActivatedRoute, Router, TitleStrategy } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ProductServiceService } from 'src/app/product-service.service';
+import { AuthService } from 'src/app/shared/services/auth.service';
 import { Category } from '../category';
 import { cartProduct, Product } from '../product';
 import { ProductService } from '../product.service';
@@ -20,9 +21,10 @@ export class ViewProductByCategoryComponent implements OnInit {
   constructor(private activatedRoute:ActivatedRoute,private cs:ProductServiceService, private productservice:ProductService,private toastr:ToastrService,
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
-    public ngZone: NgZone){}
+    public ngZone: NgZone,public authService:AuthService,public router:Router){}
   addCart(data:any){
-    console.log(data)
+    if(this.authService.isLoggedIn){
+      console.log(data)
     let cardItem=new cartProduct();
     cardItem.categoryId=data.categoryId;
     cardItem.description=data.description
@@ -34,21 +36,23 @@ export class ViewProductByCategoryComponent implements OnInit {
     cardItem.isAvailble=data.isAvailble;
     cardItem.rating=data.rating;
     console.log(cardItem,"string");
-    this.cs.setCartData(cardItem).subscribe();
+    this.cs.setCartData(cardItem).subscribe((res) => {
+      
+    this.cs.cartCount(++ProductServiceService.itemCount);
+
+    });
     this.toastr.success("Item is added in cart successfully")
+    }
+    else{
+      this.router.navigate(['sign-in']);
+    }
+    
 
     // this.cs.setCartData(data).subscribe();
     // this.toastr.success("Item is added in cart successfully")
     
   }
-    // OnClick(categoryId:any){
-    //   this.productservice.searchCategoryProduct(categoryId).subscribe(
-    //     list=>{this.productList=list; 
-    //     console.log(list);
-    //     }
-        
-    //     )
-    // }
+    
   ngOnInit(): void {
    
     // this.activatedRoute.queryParams.subscribe(data=>{

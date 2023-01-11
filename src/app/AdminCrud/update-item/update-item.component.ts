@@ -20,10 +20,10 @@ export class UpdateItemComponent implements OnInit{
       price:['',Validators.required],
       productImg:['',Validators.required],
       productName:['',Validators.required],
-      categoryId:[''],
-      description:[''],
-      rating:[''],
-      isAvailble:['']
+      categoryId:['',Validators.required],
+      description:['',Validators.required],
+      rating:['',Validators.required],
+      isAvailble:['',Validators.required]
     })
     let productIt=this.router.snapshot.paramMap.get('id');
     this.fb.getItem(productIt).subscribe(obj=>{this.obj=obj;

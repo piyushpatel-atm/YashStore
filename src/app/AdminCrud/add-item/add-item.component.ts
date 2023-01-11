@@ -22,10 +22,10 @@ export class AddItemComponent implements OnInit{
       price:['',Validators.required],
       productImg:['',Validators.required],
       productName:['',Validators.required],
-      categoryId:[''],
-      description:[''],
-      rating:[''],
-      isAvailble:['']
+      categoryId:['',Validators.required],
+      description:['',Validators.required],
+      rating:['',Validators.required],
+      isAvailble:['',Validators.required]
     })
    
   }

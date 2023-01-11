@@ -23,3 +23,40 @@ img{
     height: 50px;
     width: 50px;
 }
+
+.nav{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+.nav h1{
+ color: blueviolet;
+ margin: 0;
+ font-size: 40px;
+}
+.nav ul{
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li{
+    padding-left: 15px;
+    
+}
+
+h1 a{
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.mat-toolbar
+
+{
+
+  position: fixed;
+
+  z-index: 99;
+
+}

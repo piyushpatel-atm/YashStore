@@ -5,37 +5,37 @@
     <form [formGroup]="item" (ngSubmit)="submit()" class="p-4 text-bg-light">
         <h1 style="color:black">Update Product</h1><br>
         <mat-form-field class="md col-6">
-            <input matInput placeholder="Name" apperance="fill" formControlName="productName">
+            <input matInput placeholder="Name" apperance="fill" formControlName="productName" required>
             <mat-icon matTextSuffix>productName</mat-icon>
             <mat-label>ItemName</mat-label>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="productImg" apperance="fill" formControlName="productImg">
+            <input matInput placeholder="productImg" apperance="fill" formControlName="productImg" required>
             <mat-icon matTextSuffix>image</mat-icon>
             <mat-label>productImg</mat-label>           
         </mat-form-field><br>        
         <mat-form-field>
-            <input matInput placeholder="Price" apperance="fill" formControlName="price">
+            <input matInput placeholder="Price" apperance="fill" formControlName="price" required>
             <mat-icon matTextSuffix>price</mat-icon>
             <mat-label>Price</mat-label>         
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Price" apperance="fill" formControlName="categoryId">
+            <input matInput placeholder="Price" apperance="fill" formControlName="categoryId" required>
             <mat-icon matTextSuffix>category</mat-icon>
             <mat-label>categoryId</mat-label>         
         </mat-form-field><br>
         <mat-form-field>
-            <input matInput placeholder="Price" apperance="fill" formControlName="description">
+            <input matInput placeholder="Price" apperance="fill" formControlName="description" required>
             <mat-icon matTextSuffix>description</mat-icon>
             <mat-label>description</mat-label>         
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="rating" apperance="fill" formControlName="rating">
+            <input matInput placeholder="rating" apperance="fill" formControlName="rating" required>
             <mat-icon matTextSuffix>rating</mat-icon>
             <mat-label>rating</mat-label>         
         </mat-form-field><br>
         <mat-form-field>
-            <input matInput placeholder="Price" apperance="fill" formControlName="isAvailble">
+            <input matInput placeholder="Price" apperance="fill" formControlName="isAvailble" required>
             <mat-icon matTextSuffix>isAvailble</mat-icon>
             <mat-label>isAvailble</mat-label>         
         </mat-form-field><br>
