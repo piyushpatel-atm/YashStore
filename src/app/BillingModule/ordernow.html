@@ -1,0 +1,131 @@
+<div class="container mt-5 mb-5">
+
+    <div class="row d-flex justify-content-center">
+
+        <div class="col-md-8">
+
+            <div class="card">
+
+
+                    <div class="text-left logo p-2 px-5">
+
+                        <img src="https://www.yash.com/wp-content/themes/html5blank-stable/images/yash-logo-new.svg" width="100" height="100">
+                        
+
+                    </div>
+
+                    <div class="invoice p-5">
+
+                        <h2>Your order Confirmed!</h2>
+
+                        <span>You order has been confirmed and will be shipped in next two days!</span>
+
+                        <div class="payment border-top mt-3 mb-3 border-bottom table-responsive">
+
+                        </div>
+
+                            <div class="product border-bottom table-responsive">
+
+                                <table class="table table-borderless" *ngFor="let item of cartList">
+
+                                <tbody>
+                                    <tr>
+                                        <td width="20%">
+                                        
+                                        <img src="{{item.productImg}}" width="90">
+
+                                    </td>
+                                
+                                    <td width="60%">
+                                        <span class="font-weight-bold">{{item.productName}}</span>
+                                        <div class="product-qty">
+                                            <span class="d-block">Quantity:{{item.quantity}}</span>
+                                            <span>Color:Dark</span>
+                                            
+                                        </div>
+                                    </td>
+                                    <td width="20%">
+                                        <div class="text-right">
+                                            <span class="font-weight-bold">{{item.price}}</span>
+                                        </div>
+                                    </td>
+                                    </tr>
+
+
+                                   
+                                </tbody> 
+                                    
+                                </table>
+                                
+
+
+                            </div>
+                            <article class="ms-lg-4 mt-4 mt-lg-0" style="max-width: 320px">
+                                <h6 class="card-title">Summary</h6>
+                        
+                                <dl class="dlist-align">
+                                    <dt>Total price:</dt>
+                                    <dd class="text-end">Rs.{{totalPrice}}</dd>
+                                </dl>
+                                <dl class="dlist-align">
+                                    <dt>Discount:</dt>
+                                    <dd class="text-end text-danger">- Rs.{{Discount}}</dd>
+                                </dl>
+                                <dl class="dlist-align">
+                                    <dt>Shipping cost:</dt>
+                                    <dd class="text-end">+ Rs.{{shipping}}</dd>
+                                </dl>
+                                <dl class="dlist-align">
+                                    <dt>Coupons:</dt>
+                                    <dd class="text-end">- Rs.{{coupons}}</dd>
+                                </dl>
+                                <hr>
+                                <dl class="dlist-align">
+                                    <dt> Total: </dt>
+                                    <dd class="text-end"> <strong class="text-dark">{{totalPrice+shipping-Discount-coupons}}</strong> </dd>
+                                </dl>
+                        
+                            
+                        
+                                <hr>
+                               
+                        <br><br>
+        
+                            <p style>We will be sending shipping confirmation email when the item shipped successfully!</p>
+                            <p class="font-weight-bold mb-0">Thanks for shopping with us!</p>
+                            <span>Yash Mart</span>
+
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;">
+                                <tr>
+                                    <td align="center" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 24px; padding-top: 25px;">
+                                        <h2 style="font-size: 24px; font-weight: 800; line-height: 30px; color:black; margin: 0;">
+                                            Get 30% off your next order.
+                                        </h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding: 25px 0 15px 0;">
+                                        <table border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td align="center" style="border-radius: 5px;" bgcolor="#66b3b7">
+                                                  <a href="products"  style="font-size: 18px; font-family: Open Sans, Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; border-radius: 5px; background-color: #F44336; padding: 15px 30px; border: 1px solid #F44336; display: block;">Shop Again</a>
+                                                  
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+
+
+
+        
+            
+        
+        
+  
+    
+
+   
