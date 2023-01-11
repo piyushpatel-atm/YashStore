@@ -25,7 +25,7 @@ export class CartModuleComponent implements OnInit {
   tableLock: boolean = false;
   email: string = JSON.parse(localStorage.getItem('user')!).email;
   ngOnInit(): void {
-
+    this.cartList=[]
     this.cs.getCartData().subscribe(list => {
       list.forEach(element => {
         console.log(element)
@@ -40,10 +40,12 @@ export class CartModuleComponent implements OnInit {
 
       if (this.cartList.length <= 0) {
         this.lock = true;
+        this.totalPrice=0
       } else {
         this.tableLock = true;
       }
-      list.forEach(list => {
+      this.cartList.forEach(list => {
+        console.log(list.price)
         this.totalPrice += list.price*list.quantity;
         console.log(list.quantity)
         console.log(typeof(this.totalPrice))
@@ -67,10 +69,11 @@ export class CartModuleComponent implements OnInit {
       });
       if (this.cartList.length <= 0) {
         this.lock = true;
+        this.totalPrice=0
       } else {
         this.tableLock = true;
       };
-      list.forEach(list => {
+      this.cartList.forEach(list => {
         this.totalPrice += (list.price*list.quantity)
 
       })
@@ -86,32 +89,51 @@ export class CartModuleComponent implements OnInit {
     if (i.quantity != 5) {
       i.quantity += 1;
       this.cs.updateCart(i.id, i).subscribe();
-
+      this.totalPrice=0;
+      this.cartList = [];
     }
-
+    
     this.cs.getCartData().subscribe(list => {
-      this.cartList = list;
-
-      if (list.length <= 0) {
-
+      list.forEach(element => {
+        if (element.email == this.email) {
+          this.cartList.push(element)
+        }
+      });
+      if (this.cartList.length <= 0) {
         this.lock = true;
-
+        this.totalPrice=0
       } else {
-
         this.tableLock = true;
-
       };
+      this.cartList.forEach(list => {
+        this.totalPrice += (list.price*list.quantity)
 
-      this.totalPrice = 0;
-
-      list.forEach(list => {
-
-        // this.totalPrice+=list.price
-
-        this.totalPrice += (list.price * list.quantity)
-      }
-      )
+      })
     });
+
+    // this.cs.getCartData().subscribe(list => {
+    //   this.cartList = list;
+
+    //   if (list.length <= 0) {
+
+    //     this.lock = true;
+
+    //   } else {
+
+    //     this.tableLock = true;
+
+    //   };
+
+    //   this.totalPrice = 0;
+
+    //   list.forEach(list => {
+
+    //     // this.totalPrice+=list.price
+
+    //     this.totalPrice += (list.price * list.quantity)
+    //   }
+    //   )
+    // });
     this.router.navigate(['cartItem'])
   }
   dec(i:any){
@@ -119,22 +141,26 @@ export class CartModuleComponent implements OnInit {
      if(i.quantity != 1){
     i.quantity -= 1;
     this.cs.updateCart(i.id, i).subscribe();
-    this.cs.getCartData().subscribe(list=>{this.cartList=list;
-      if(list.length<=0){
-        this.lock=true;
-      }else{
-        this.tableLock=true;
-      }
-      this.totalPrice=0;
-      list.forEach(list => {
+    this.totalPrice=0;
+    this.cartList = [];
+    this.cs.getCartData().subscribe(list => {
+      list.forEach(element => {
+        if (element.email == this.email) {
+          this.cartList.push(element)
+        }
+      });
+      if (this.cartList.length <= 0) {
+        this.lock = true;
+        this.totalPrice=0
+      } else {
+        this.tableLock = true;
+      };
+      this.cartList.forEach(list => {
+        
+        this.totalPrice += (list.price*list.quantity)
 
-        // this.totalPrice+=list.price
-
-        this.totalPrice+=(list.price*list.quantity)}
-
-
-
-    )});
+      })
+    });
       }}
 }
 

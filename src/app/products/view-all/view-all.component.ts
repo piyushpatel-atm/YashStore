@@ -19,7 +19,8 @@ export class ViewAllComponent implements OnInit {
   userData: any;
   email!:any; 
   productList!: Product[];
-  constructor(private toastr: ToastrService,private activatedRoute:ActivatedRoute,private productService:ProductService,private cs:ProductServiceService,public afs: AngularFirestore, // Inject Firestore service
+  constructor(private toastr: ToastrService,private activatedRoute:ActivatedRoute,private productService:ProductService,private cs:ProductServiceService,
+  public afs: AngularFirestore, // Inject Firestore service
   public afAuth: AngularFireAuth, // Inject Firebase auth service
   public ngZone: NgZone,public authService:AuthService,public router:Router){
     this.afAuth.authState.subscribe((user) => {
@@ -46,13 +47,13 @@ export class ViewAllComponent implements OnInit {
     cardItem.description=data.description
     cardItem.quantity=1;
     cardItem.email=this.email;
-    //cardItem.id=data.id;
     cardItem.price=data.price;
     cardItem.productImg=data.productImg;
     cardItem.productName=data.productName;
     cardItem.isAvailble=data.isAvailble;
     cardItem.rating=data.rating;
-
+    console.log(cardItem,"string");
+    console.log(this.email)
     this.cs.setCartData(cardItem).subscribe();
     this.toastr.success("Item is added in cart successfully")
     
