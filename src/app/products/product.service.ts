@@ -51,4 +51,6 @@ export class ProductService {
     const categoryUrl="http://localhost:3000/categories/";
     return this.httpClient.get<Category[]>(categoryUrl);
   }
+
+ 
 }

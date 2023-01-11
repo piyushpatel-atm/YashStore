@@ -7,7 +7,7 @@ import { ViewProductComponent } from './view-product/view-product.component';
 
 const routes: Routes = [
   { path: '', component: ViewAllComponent },
-  { path: 'products', component: ProductsComponent },
+  { path: 'products', component: ProductsComponent},
   { path: 'view-all', component: ViewAllComponent },
   { path: 'view-product/:id', component: ViewProductComponent },
   { path: 'view-product-by-category/:id', component: ViewProductByCategoryComponent },

@@ -37,8 +37,9 @@ const routes: Routes = [
   {path:"category",component:AllCategoryComponent},
   {path:"updateItem/:id",component:UpdateItemComponent},
   {path:"cartItem",component:CartModuleComponent,canActivate:[AuthGuard]},
-  {path:"Checkout",component:CheckoutComponent}
-  // {path:"products/view-product-by-category/:id",component:ViewProductByCategoryComponent}
+  {path:"Checkout",component:CheckoutComponent},
+  {path:"products/view-product-by-category/:id",component:ViewProductByCategoryComponent}
+  
 ];
 
 @NgModule({

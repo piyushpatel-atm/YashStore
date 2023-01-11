@@ -56,7 +56,8 @@ export class ViewProductByCategoryComponent implements OnInit {
     //   console.log(this.searchCategory);
 
       let categoryId=this.activatedRoute.snapshot.paramMap.get("id");
-    
+       console.log(categoryId);
+      
 
       this.productservice.searchCategoryProduct(categoryId).subscribe({
         next:  categoryData=>{
