@@ -18,6 +18,7 @@ export class CheckoutComponent {
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
     public ngZone: NgZone) { }
+  coupons:number=0;
   shipping: number = 60;
   Discount: number = 30;
   totalPrice: number = 0;
@@ -36,12 +37,15 @@ export class CheckoutComponent {
         }
 
       });
-      list.forEach(list => {
+      this.cartList.forEach(list => {
         this.totalPrice += list.price
 
       });
     });
 
 
+  }
+  apply(){
+    this.coupons=30
   }
 }
