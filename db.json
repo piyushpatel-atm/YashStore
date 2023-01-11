@@ -16,20 +16,42 @@
       "productName": "boAt Airdopes 201 ",
       "isAvailble": true,
       "rating": 5
+    },
+    {
+      "categoryId": 2,
+      "description": "boAt Airdopes 201 | TWS Wireless Earbuds with 10mm Drivers, 470mAh charging case, Up to 3 hours of audio bliss",
+      "id": 10,
+      "price": 1989,
+      "productImg": "https://img.freepik.com/free-photo/one-white-sneaker-shoe-isolated-white_93675-134695.jpg?w=2000",
+      "productName": "boAt Airdopes 201 ",
+      "isAvailble": true,
+      "rating": 5
     }
   ],
   "cartData": [
     {
+      "categoryId": 2,
+      "description": "boAt Airdopes 201 | TWS Wireless Earbuds with 10mm Drivers, 470mAh charging case, Up to 3 hours of audio bliss",
+      "quantity": 3,
+      "email": "piyush29041999@gmail.com",
+      "price": 1989,
+      "productImg": "https://img.freepik.com/free-photo/one-white-sneaker-shoe-isolated-white_93675-134695.jpg?w=2000",
+      "productName": "boAt Airdopes 201 ",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 1
+    },
+    {
       "categoryId": 1,
       "description": "boAt Airdopes 201 | TWS Wireless Earbuds with 10mm Drivers, 470mAh charging case, Up to 3 hours of audio bliss",
-      "quantity": 4,
+      "quantity": 1,
       "email": "piyush29041999@gmail.com",
-      "id": 9,
       "price": 1999,
       "productImg": "http://cdn.shopify.com/s/files/1/0057/8938/4802/products/14f33054-fb1f-4e9c-aa1b-08ff38646fd0.png?v=1625046508",
       "productName": "boAt Airdopes 201 ",
       "isAvailble": true,
-      "rating": 5
+      "rating": 5,
+      "id": 2
     }
   ],
   "categories": [
@@ -85,6 +107,12 @@
       "email": "testuser@gmail.com",
       "password": "123456789",
       "mob": "9876543210"
+    },
+    {
+      "email": "piyush29041999@gmail.com",
+      "password": "",
+      "mob": "",
+      "id": 4
     }
   ]
 }
