@@ -29,13 +29,13 @@
     },
     {
       "id": 3,
+      "price": "500",
+      "productImg": "https://www.teachthought.com/storage/2021/12/91YchjGUxZL._AC_UY327_FMwebp_QL65_.webp",
       "productName": "Diary Of a Wimpy Kid",
       "categoryId": 5,
       "description": " Greg is an extremely relatable protagonist attending middle school and dealing with bullies, hormones, puberty, and social dynamics. ",
-      "price": 400,
-      "isAvailble": true,
-      "productImg": "https://www.teachthought.com/storage/2021/12/91YchjGUxZL._AC_UY327_FMwebp_QL65_.webp",
-      "rating": 2
+      "rating": 2,
+      "isAvailble": true
     },
     {
       "id": 4,
@@ -159,13 +159,13 @@
     },
     {
       "id": 17,
+      "price": "55000",
+      "productImg": "https://rukminim1.flixcart.com/image/832/832/xif0q/computer/2/h/n/-original-imaggzesaqdhy3xd.jpeg?q=70",
       "productName": " ASUS TUF Gaming",
       "categoryId": 1,
       "description": " ASUS TUF Gaming A15 with 90Whr Battery Ryzen 7 Octa Core 5800H - (16 GB/512 GB SSD/Windows 11 Home/6 GB Graphics",
-      "price": 1300,
-      "isAvailble": true,
-      "productImg": "https://rukminim1.flixcart.com/image/832/832/xif0q/computer/2/h/n/-original-imaggzesaqdhy3xd.jpeg?q=70",
-      "rating": 4
+      "rating": 4,
+      "isAvailble": true
     },
     {
       "id": 18,
@@ -367,15 +367,39 @@
     },
     {
       "categoryId": 5,
-      "description": " Greg is an extremely relatable protagonist attending middle school and dealing with bullies, hormones, puberty, and social dynamics. ",
+      "description": "The Book Thief tells the story of Liesel, a little girl who is taken to a new home because her mother can't afford to take care of her. ",
       "quantity": 1,
       "email": "akshatkumarjain27@gmail.com",
-      "price": 400,
-      "productImg": "https://www.teachthought.com/storage/2021/12/91YchjGUxZL._AC_UY327_FMwebp_QL65_.webp",
-      "productName": "Diary Of a Wimpy Kid",
+      "price": 300,
+      "productImg": "https://celadonbooks.com/wp-content/uploads/2019/02/the-book-thief.jpg",
+      "productName": "The Book Thief",
       "isAvailble": true,
-      "rating": 2,
+      "rating": 4,
       "id": 29
+    },
+    {
+      "categoryId": 5,
+      "description": "This one’s not your average love story! Hazel feels defined by her cancer diagnosis. When she meets Augustus Waters in a Cancer Kid Support Group, her outlook on life and her own future change rapidly. ",
+      "quantity": 1,
+      "email": "akshatkumarjain27@gmail.com",
+      "price": 299,
+      "productImg": "https://www.teachthought.com/storage/2021/12/81a4kCNuHL._AC_UY327_FMwebp_QL65_.webp",
+      "productName": "The fault in our stars",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 30
+    },
+    {
+      "categoryId": 3,
+      "description": " Juicer Stainless Steel Manual Citrus Juicer Industrial Fruit Press Professional Juice Extractor Heavy Duty Citrus Press Orange Crusher,Material Stainless steel",
+      "quantity": 1,
+      "email": "akshatkumarjain27@gmail.com",
+      "price": 1299,
+      "productImg": "https://clothesmania.in/wp-content/uploads/2022/04/71af8P-GnWL._AC_SL1500-768x768.jpg",
+      "productName": "Citrus Juicer",
+      "isAvailble": true,
+      "rating": 5,
+      "id": 31
     }
   ],
   "categories": [
