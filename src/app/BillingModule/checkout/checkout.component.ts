@@ -2,7 +2,6 @@ import { Component, ElementRef, NgZone, ViewChild,OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
-import jsPDF from 'jspdf';
 import { ToastrService } from 'ngx-toastr';
 import { ProductServiceService } from 'src/app/product-service.service';
 import { cartProduct } from 'src/app/products/product';

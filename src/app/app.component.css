@@ -60,3 +60,4 @@ h1 a{
   z-index: 99;
 
 }
+.cp-text{ text-align: center; text-shadow: 0 1px rgba(255, 255, 255, 0.1);}
