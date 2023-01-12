@@ -47,7 +47,8 @@ export class CheckoutComponent implements OnInit {
 
       });
       this.cartList.forEach(list => {
-        this.totalPrice += list.price
+        var y: number = +list.price;
+        this.totalPrice += y;
 
       });
     });
@@ -135,8 +136,8 @@ export class DialogExample {
 
       });
       this.cartList.forEach(list => {
-        this.totalPrice += list.price
-
+        var y: number = +list.price;
+        this.totalPrice += y;
       });
     });
 
