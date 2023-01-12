@@ -121,7 +121,49 @@
                             <label for="" class="form-label">Message to seller</label>
                             <textarea class="form-control"></textarea>
                         </div> <!-- col end.// -->
-
+                        <div>
+                            <label>Payment Method</label>:-
+                            <mat-form-field appearance="fill" style="height: 80px; width: 300px;" >
+                                <mat-label>Payment Method</mat-label>
+                                <mat-select [(ngModel)]="itemvalue">
+                                  <mat-option value="Card" >Card 
+                                  </mat-option>
+                                  <mat-option value="UPI">UPI
+                                </mat-option>
+                                <mat-option value="cod">COD
+                                </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                              <div class="row" *ngIf="itemvalue=='Card' ">
+                                <div class="col-sm-8 mb-3">
+    
+                                    <label for="" class="form-label">Card Number</label>
+                                    <input type="text" class="form-control" placeholder="Type here">
+                                </div> <!-- col end.// -->
+    
+                              <!-- col end.// -->
+    
+                                <div class="col-sm-4 mb-3">
+                                    <label for="" class="form-label">Name On Card</label>
+                                    <input type="text" class="form-control" placeholder="Type here">
+                                </div> <!-- col end.// -->
+    
+                                <div class="col-sm-4 col-6 mb-3">
+                                    <label for="" class="form-label">Expiry</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div> <!-- col end.// -->
+    
+                                <div class="col-sm-4 col-6 mb-3">
+                                    <label for="" class="form-label">CVV</label>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div> <!-- col end.// -->
+                            </div> 
+                            <div class="col-sm-8 mb-3" *ngIf="itemvalue=='UPI'">
+    
+                                <label for="" class="form-label">UPI ID</label>
+                                <input type="text" class="form-control" placeholder="@ybl">
+                            </div>
+                        </div>
                         <div class="float-end">
 
                             <button class="btn btn-light" routerLink="/cartItem">Cancel</button>
@@ -129,7 +171,7 @@
 
                         </div>
 
-                    </div> <!-- card-body end.// -->
+                    </div>
                 </article> <!-- card end.// -->
                 <!-- ============== COMPONENT CHECKOUT .// =============== -->
 
@@ -174,10 +216,10 @@
                         <figure class="itemside align-items-center mb-4">
                             <div class="aside">
                                 
-                                <img src="{{item.productImg}}" class="img-sm rounded border" style="height: 50px;width: 50px;">
+                                <img src="{{item.productImg}}" class="img-sm rounded border" style="height: 100px;width: 100px;">
                             </div>
                             <figcaption class="info">
-                                <a href="#" class="title">{{item.productName}}</a>
+                                <a class="title">{{item.productName}}</a>
                                 <div class="price text-muted">Price :{{item.price}}</div> <!-- price .// -->
                             </figcaption>
                         </figure>
