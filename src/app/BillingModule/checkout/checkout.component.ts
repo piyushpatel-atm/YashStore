@@ -6,6 +6,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ProductServiceService } from 'src/app/product-service.service';
 import { cartProduct } from 'src/app/products/product';
 import { MatDialog } from '@angular/material/dialog';
+import {FormsModule} from '@angular/forms';
 
 
 @Component({
@@ -25,7 +26,7 @@ export class CheckoutComponent implements OnInit {
     public dialog: MatDialog
     ) { }
 
-   
+  itemvalue!:string;
   coupons:number=0;
   shipping: number = 60;
   Discount: number = 30;
@@ -87,6 +88,7 @@ export class DialogExample {
     public ngZone: NgZone,
     public dialog: MatDialog
     ) { }
+    
 
 
     // @ViewChild('content', {static: false}) el!:ElementRef;
@@ -112,6 +114,7 @@ export class DialogExample {
   
     //   });
     // }
+  itemvalue:string="card";
   coupons:number=0;
   shipping: number = 60;
   Discount: number = 30;
